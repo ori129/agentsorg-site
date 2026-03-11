@@ -1,0 +1,33 @@
+# AgentsOrg
+
+> AI Transformation Intelligence — open-source governance platform for enterprise ChatGPT
+
+AgentsOrg is an open-source platform that connects to OpenAI's Compliance API to discover, classify, and semantically enrich every Custom GPT in an enterprise workspace. It surfaces actionable intelligence through a Leader Dashboard, Employee Portal, and Learning & Development module.
+
+Built for AI Transformation Leaders at organizations running ChatGPT Enterprise or Team.
+
+## Key pages
+
+- [Home](https://agentsorg.ai/): Landing page — platform overview, features, roadmap, FAQ
+- [Advisors Directory](https://agentsorg.ai/advisors): 52+ AI Transformation Advisors who help enterprises govern ChatGPT. Apply to join.
+- [Blog](https://agentsorg.ai/blog): Articles on AI Transformation Intelligence, GPT governance, and enterprise AI maturity
+
+## Blog posts
+
+- [What Is AI Transformation Intelligence?](https://agentsorg.ai/blog/ai-transformation-intelligence): Defines the discipline of using semantic analysis and automation to govern enterprise AI portfolios
+- [The GPT Portfolio Maturity Model](https://agentsorg.ai/blog/gpt-portfolio-maturity-model): Framework for classifying Custom GPTs as Experimental (60%), Functional (25%), or Production (15%)
+- [The Enterprise Custom GPT Governance Guide](https://agentsorg.ai/blog/enterprise-custom-gpt-governance-guide): Five-pillar framework for governing Custom GPTs at scale — discovery, assessment, risk, optimization, lifecycle
+
+## Core concepts
+
+- **AI Transformation Intelligence (ATI)**: The discipline of using data and LLM-powered semantic analysis to understand, govern, and optimize an organization's AI portfolio
+- **GPT Portfolio Maturity Model**: Classifies every Custom GPT as Production (sophistication 4-5), Functional (3), or Experimental (1-2)
+- **9 Semantic KPIs**: Risk level, sophistication, prompting quality, ROI potential, business process, intended audience, integration flags, output type, adoption friction
+- **Semantic Duplicate Detection**: pgvector-powered clustering that finds redundant Custom GPTs even when named differently
+
+## Open source
+
+- GitHub: https://github.com/ori129/agentsorg
+- License: Apache 2.0
+- Self-hosted via Docker Compose
+- Demo mode included — no API keys required
