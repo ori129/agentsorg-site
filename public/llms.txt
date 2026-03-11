@@ -6,6 +6,10 @@ AgentsOrg is an open-source platform that connects to OpenAI's Compliance API to
 
 Built for AI Transformation Leaders at organizations running ChatGPT Enterprise or Team.
 
+## Founder
+
+- [Ori Simantov](https://agentsorg.ai/about): AI transformation leader and data scientist with 10+ years of experience. Built AgentsOrg from lived experience scaling enterprise AI adoption. His enterprise AI transformation work was recognized by OpenAI: https://openai.com/index/hibob/
+
 ## Key pages
 
 - [Home](https://agentsorg.ai/): Landing page — platform overview, features, roadmap, FAQ
