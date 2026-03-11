@@ -1,38 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const kpis = ['Risk', 'Quality', 'ROI', 'Sophistication', 'Business Process', 'Audience', 'Integrations', 'Output Type', 'Adoption Friction'];
-
-const dashboardSections = [
-  {
-    label: 'Overview',
-    color: 'accent',
-    desc: 'Portfolio health at a glance — KPI strip, creation velocity, GPT-level drill-downs by builder, department, maturity, process, and output type.',
-  },
-  {
-    label: 'Governance',
-    color: 'red',
-    desc: 'Three lenses on risk: flagged GPTs by severity, semantic duplicate clusters, and prompting quality distribution across the portfolio.',
-    items: ['Risk Panel', 'Duplicates', 'Quality Scores'],
-  },
-  {
-    label: 'Learning & Development',
-    color: 'amber',
-    desc: 'Composite builder scores surface your AI champions. LLM-driven course recommendations target actual gaps. Workshop tracking shows real improvement over time.',
-    items: ['Recognition', 'Learning', 'Workshops'],
-  },
-  {
-    label: 'Employee Portal',
-    color: 'green',
-    desc: 'Read-only GPT discovery for the entire org. Find the right GPT instead of building another duplicate.',
-  },
-];
-
-const steps = [
-  { num: '01', title: 'Clone & deploy', code: 'git clone https://github.com/ori129/agentsorg.git\ncd agentsorg && make up', desc: 'One command. Three containers. Your data never leaves your infrastructure.' },
-  { num: '02', title: 'Connect or demo', desc: 'Enter your OpenAI Compliance API key — or flip on Demo mode. No API key needed to explore the full platform.' },
-  { num: '03', title: 'Run the pipeline', desc: 'Fetch → Filter → Classify → Enrich → Embed → Store. Every Custom GPT scored across 9 semantic dimensions automatically.' },
-  { num: '04', title: 'Act on intelligence', desc: 'Leader Dashboard surfaces risk, duplicates, quality gaps, and L&D opportunities. Employee Portal gives the org a place to discover what already exists.' },
+// What the Compliance API actually exposes — the full surface
+const apiSurface = [
+  { name: 'Custom GPTs', phase: 1, icon: '🤖' },
+  { name: 'Projects', phase: 1, icon: '📁' },
+  { name: 'Conversations', phase: 2, icon: '💬' },
+  { name: 'Users & Behavior', phase: 2, icon: '👥' },
+  { name: 'Automations', phase: 3, icon: '⚡' },
+  { name: 'Canvases', phase: 3, icon: '🎨' },
+  { name: 'Memories', phase: 3, icon: '🧠' },
+  { name: 'Recordings', phase: 3, icon: '🎙️' },
+  { name: 'Compliance Logs', phase: 2, icon: '📋' },
+  { name: 'Codex Environments', phase: 3, icon: '💻' },
 ];
 
 const faqs = [
@@ -41,47 +21,55 @@ const faqs = [
     a: 'No. Independent open-source project. Integrates with OpenAI\'s Compliance API, GPT API, and Embeddings API — not endorsed by OpenAI.',
   },
   {
-    q: 'Does my GPT data leave my infrastructure?',
-    a: 'Never. Fully self-hosted on your own PostgreSQL instance. API keys are encrypted at rest with Fernet before touching the database.',
+    q: 'Does my data leave my infrastructure?',
+    a: 'Never. Fully self-hosted on your own PostgreSQL instance. API keys are Fernet-encrypted at rest.',
   },
   {
-    q: 'What do I actually need to run this?',
-    a: 'Docker Desktop. That\'s it. Clone, run make up, and you\'re live at localhost:3000. Demo mode works without any OpenAI key.',
+    q: 'What do I need to get started?',
+    a: 'Docker Desktop. Clone the repo, run make up, and you\'re live at localhost:3000 in under 5 minutes. Demo mode works without any API key.',
+  },
+  {
+    q: 'Is Phase 1 (GPT governance) production-ready today?',
+    a: 'Yes. Discovery via Compliance API, 9-KPI semantic enrichment, risk flagging, duplicate detection, builder L&D, and demo mode are all fully built and running.',
   },
   {
     q: 'How is this different from the OpenAI admin console?',
-    a: 'The admin console shows you a list. AgentsOrg gives you intelligence — risk scores, quality grades, duplicate clusters, maturity tiers, builder recognition, and targeted learning recommendations per person.',
+    a: 'The admin console is a management interface. AgentsOrg is an intelligence layer — it enriches, scores, clusters, and surfaces patterns across everything the Compliance API exposes. Different purpose entirely.',
   },
   {
     q: 'Can I use this commercially?',
-    a: 'Yes. Apache 2.0 — free for any use including production and commercial deployments. No restrictions, no license fees.',
+    a: 'Yes. Apache 2.0 — free for any use including production and commercial deployments.',
   },
 ];
 ---
 
 <Base
   title="AgentsOrg — AI Transformation Intelligence for Enterprise ChatGPT"
-  description="Open-source governance platform for enterprise Custom GPTs. Connect to OpenAI's Compliance API. Discover, score, and act on every GPT in your workspace."
+  description="The open-source intelligence layer for enterprise ChatGPT. Built on OpenAI's Compliance API. Start with GPT governance. Expand to full enterprise AI intelligence."
 >
 
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
   <section class="pt-32 pb-24 px-6 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-accent/[0.07] via-transparent to-transparent pointer-events-none"></div>
-    <div class="absolute top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-accent/[0.04] rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-32 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-accent/[0.04] rounded-full blur-[160px] pointer-events-none"></div>
 
     <div class="max-w-4xl mx-auto text-center relative">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-surface text-xs text-text-muted mb-8 animate-fade-in">
         <span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
-        Open Source &middot; Apache 2.0 &middot; Self-Hosted
+        Open Source &middot; Apache 2.0 &middot; Built on OpenAI's Compliance API
       </div>
 
       <h1 class="text-5xl md:text-[4.5rem] font-black tracking-tight leading-[1.05] mb-7 animate-fade-in animate-delay-1">
-        Your Custom GPTs.<br/>
-        <span class="bg-gradient-to-r from-accent via-accent-2 to-violet bg-clip-text text-transparent">Finally governed.</span>
+        The intelligence layer<br/>
+        <span class="bg-gradient-to-r from-accent via-accent-2 to-violet bg-clip-text text-transparent">for enterprise ChatGPT.</span>
       </h1>
 
-      <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 animate-fade-in animate-delay-2 leading-relaxed">
-        Connect to OpenAI's Compliance API. Discover every Custom GPT in your enterprise workspace. Score it, flag it, learn from it.
+      <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-4 animate-fade-in animate-delay-2 leading-relaxed">
+        OpenAI's Compliance API exposes the full digital exhaust of your enterprise AI deployment. AgentsOrg turns that data into intelligence AI leaders can act on.
+      </p>
+
+      <p class="text-base text-text-dim max-w-xl mx-auto mb-10 animate-fade-in animate-delay-2">
+        Phase 1 — Custom GPT governance — is live today. The platform is built to expand across every data source the API exposes.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-3">
@@ -98,56 +86,65 @@ const faqs = [
           target="_blank"
           class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-border bg-surface text-text font-semibold hover:border-accent/40 transition-all text-sm"
         >
-          Try Demo Mode — no API key needed
+          Try Demo — no API key needed
         </a>
       </div>
 
-      <!-- Stats strip -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto animate-fade-in animate-delay-4">
-        {[
-          { value: '9', label: 'Semantic KPIs per GPT' },
-          { value: '6', label: 'Pipeline stages' },
-          { value: '3', label: 'Views: Leader · Employee · Setup' },
-          { value: '0', label: 'API key needed for demo' },
-        ].map(s => (
-          <div class="p-4 rounded-xl border border-border bg-surface text-center">
-            <div class="text-2xl font-black text-accent mb-1">{s.value}</div>
-            <div class="text-xs text-text-dim leading-tight">{s.label}</div>
-          </div>
-        ))}
+      <!-- Compliance API surface map -->
+      <div class="max-w-3xl mx-auto animate-fade-in animate-delay-4">
+        <div class="text-xs text-text-dim uppercase tracking-wider mb-4">OpenAI Compliance API — data sources AgentsOrg is built to cover</div>
+        <div class="flex flex-wrap justify-center gap-2">
+          {apiSurface.map(s => (
+            <span class={`px-3 py-1.5 rounded-full text-xs border flex items-center gap-1.5 ${
+              s.phase === 1
+                ? 'border-accent/40 bg-accent/10 text-accent'
+                : s.phase === 2
+                ? 'border-violet/30 bg-violet/5 text-violet'
+                : 'border-border bg-surface text-text-dim'
+            }`}>
+              {s.icon} {s.name}
+              {s.phase === 1 && <span class="text-accent/60">✓</span>}
+            </span>
+          ))}
+        </div>
+        <div class="flex items-center justify-center gap-6 mt-4 text-xs text-text-dim">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent inline-block"></span>Phase 1 — live</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-violet inline-block"></span>Phase 2 — coming</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-border inline-block"></span>Phase 3 — vision</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PROBLEM ───────────────────────────────────────────────── -->
+  <!-- ─── THE PROBLEM ───────────────────────────────────────────── -->
   <section class="py-24 px-6">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Your enterprise has a shadow AI problem</h2>
-        <p class="text-text-muted text-lg max-w-xl mx-auto">
-          ChatGPT Enterprise unlocked creation. Now hundreds of Custom GPTs exist with no visibility, no governance, and no measurement.
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">The data is there. The intelligence isn't.</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto">
+          OpenAI gives enterprise leaders a Compliance API with full visibility into their workspace. Nobody has built the intelligence layer on top of it. Until now.
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-5">
         {[
           {
-            accent: 'red',
-            title: 'Invisible portfolio',
-            desc: 'Hundreds of Custom GPTs built across departments. No central inventory. No idea what handles sensitive data.',
+            color: 'red',
+            title: 'No inventory',
+            desc: 'Hundreds of Custom GPTs, Projects, and automations built across the org. No central view. No risk assessment. No quality signal.',
           },
           {
-            accent: 'amber',
-            title: 'No governance',
-            desc: 'No risk assessment. No quality standard. No duplicate detection. Compliance flying blind.',
+            color: 'amber',
+            title: 'No patterns',
+            desc: 'Who are your best AI builders? Which GPTs are duplicates? Where is training needed? The data exists — it\'s just unexplored.',
           },
           {
-            accent: 'accent',
-            title: 'Wasted spend',
-            desc: 'Three teams building the same GPT. No learning transfer. No ROI measurement on ChatGPT Enterprise.',
+            color: 'accent',
+            title: 'No measurement',
+            desc: 'What is your ChatGPT Enterprise investment actually producing? Without intelligence, there\'s no answer — just spend.',
           },
         ].map(c => (
-          <div class={`p-7 rounded-2xl border border-border bg-surface hover:border-${c.accent}/30 transition-colors`}>
+          <div class={`p-7 rounded-2xl border border-border bg-surface hover:border-${c.color}/30 transition-colors`}>
             <h3 class="text-lg font-bold mb-3">{c.title}</h3>
             <p class="text-text-muted text-sm leading-relaxed">{c.desc}</p>
           </div>
@@ -156,30 +153,33 @@ const faqs = [
     </div>
   </section>
 
-  <!-- ─── WHAT'S INSIDE ─────────────────────────────────────────── -->
+  <!-- ─── PHASE 1: WHAT'S LIVE ──────────────────────────────────── -->
   <section id="features" class="py-24 px-6 bg-surface">
     <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 justify-center mb-3">
+        <span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
+        <span class="text-xs font-semibold text-green uppercase tracking-wider">Phase 1 — Live Today</span>
+      </div>
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">What's inside the platform</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">GPT & Project Governance</h2>
         <p class="text-text-muted text-lg max-w-xl mx-auto">
-          Three views. One pipeline. Runs entirely on your infrastructure.
+          The first intelligence module. Every Custom GPT and Project in your workspace — discovered, scored, and acted on.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-
-        <!-- Leader Dashboard — spans full width -->
+        <!-- Leader Dashboard -->
         <div class="md:col-span-2 p-8 rounded-2xl border border-accent/20 bg-bg">
           <div class="flex items-center gap-3 mb-6">
             <span class="px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">Leader Dashboard</span>
-            <span class="text-text-dim text-sm">For AI leaders, ai-leader and system-admin roles</span>
+            <span class="text-text-dim text-sm">ai-leader and system-admin roles</span>
           </div>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             {[
-              { name: 'Overview', color: 'accent', desc: 'Portfolio KPIs, creation velocity, drill-downs by builder · department · maturity · process · output type.' },
-              { name: 'Risk Panel', color: 'red', desc: 'Every GPT flagged by risk level. Data exposure, compliance gaps, ungoverned builds — surfaced automatically.' },
-              { name: 'Duplicates', color: 'violet', desc: 'pgvector semantic clustering finds GPTs solving the same problem, even when named differently.' },
-              { name: 'Quality Scores', color: 'amber', desc: 'Prompting quality distribution across the portfolio. Spot the gap between your best and worst builders.' },
+              { name: 'Overview', color: 'accent', desc: 'Portfolio KPIs, creation velocity, drill-downs by builder, department, maturity, business process, output type.' },
+              { name: 'Risk Panel', color: 'red', desc: 'Every GPT flagged by severity. Data exposure, compliance gaps, ungoverned builds — surfaced automatically.' },
+              { name: 'Duplicates', color: 'violet', desc: 'pgvector semantic clustering finds GPTs solving the same problem, even when named completely differently.' },
+              { name: 'Quality Scores', color: 'amber', desc: 'Prompting quality distribution across the portfolio. See the gap between your best and weakest builders.' },
             ].map(item => (
               <div class={`p-5 rounded-xl border border-border bg-surface hover:border-${item.color}/30 transition-colors`}>
                 <div class={`text-${item.color} text-xs font-semibold mb-2`}>{item.name}</div>
@@ -187,13 +187,11 @@ const faqs = [
               </div>
             ))}
           </div>
-
-          <!-- L&D row -->
-          <div class="mt-4 grid sm:grid-cols-3 gap-4">
+          <div class="grid sm:grid-cols-3 gap-4">
             {[
               { name: 'Recognition', color: 'green', desc: 'Composite builder scores: quality 35% · adoption 25% · hygiene 25% · volume 15%.' },
               { name: 'Learning', color: 'green', desc: 'LLM recommends OpenAI Academy courses per builder based on actual KPI gaps — not generic training.' },
-              { name: 'Workshops', color: 'green', desc: 'CRUD for sessions. Participant lists. GPT tagging. Time-based quality impact correlation.' },
+              { name: 'Workshops', color: 'green', desc: 'Track in-person sessions. Participant lists. GPT tagging. Measure quality improvement before vs after.' },
             ].map(item => (
               <div class={`p-5 rounded-xl border border-border bg-surface hover:border-${item.color}/30 transition-colors`}>
                 <div class={`text-${item.color} text-xs font-semibold mb-2`}>{item.name}</div>
@@ -207,47 +205,67 @@ const faqs = [
         <div class="p-8 rounded-2xl border border-border bg-bg">
           <div class="flex items-center gap-3 mb-4">
             <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green/10 text-green border border-green/20">Employee Portal</span>
-            <span class="text-text-dim text-sm">For all users</span>
+            <span class="text-text-dim text-sm">All users</span>
           </div>
           <p class="text-text-muted text-sm leading-relaxed">
-            Read-only GPT discovery for the entire org. Search and browse available Custom GPTs without accessing governance data. The first step toward reducing duplicate builds.
+            Read-only GPT discovery for the entire org. Find what already exists instead of building another duplicate.
           </p>
         </div>
 
         <!-- 9 KPIs -->
         <div class="p-8 rounded-2xl border border-border bg-bg">
-          <div class="text-xs text-text-dim uppercase tracking-wider mb-4">9 Semantic KPIs per GPT</div>
+          <div class="text-xs text-text-dim uppercase tracking-wider mb-4">9 Semantic KPIs — scored per GPT by LLM</div>
           <div class="flex flex-wrap gap-2">
-            {kpis.map(kpi => (
+            {['Risk Level', 'Prompting Quality', 'ROI Potential', 'Sophistication', 'Business Process', 'Intended Audience', 'Integrations', 'Output Type', 'Adoption Friction'].map(kpi => (
               <span class="px-2.5 py-1 rounded-full text-xs border border-border bg-surface text-text-muted">{kpi}</span>
             ))}
           </div>
-          <p class="text-text-dim text-xs mt-4 leading-relaxed">
-            LLM-powered enrichment. Every GPT scored automatically — no manual tagging.
-          </p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ─── HOW IT WORKS ──────────────────────────────────────────── -->
   <section id="how-it-works" class="py-24 px-6">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-4xl mx-auto">
       <div class="text-center mb-14">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Up and running in minutes</h2>
-        <p class="text-text-muted text-lg">No SaaS signup. No data leaving your infrastructure. One command.</p>
+        <p class="text-text-muted text-lg">Self-hosted. One command. Your data stays on your infrastructure.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5">
-        {steps.map((s) => (
-          <div class="p-7 rounded-2xl border border-border bg-surface relative overflow-hidden group hover:border-accent/30 transition-all">
-            <span class="absolute top-5 right-6 text-5xl font-black text-border/40 group-hover:text-accent/10 transition-colors select-none">{s.num}</span>
-            <h3 class="text-lg font-bold mb-3 relative">{s.title}</h3>
-            {s.code && (
-              <div class="font-mono text-xs bg-bg border border-border rounded-lg p-3 mb-3 text-text-muted whitespace-pre">{s.code}</div>
-            )}
-            <p class="text-text-muted text-sm leading-relaxed relative">{s.desc}</p>
+      <div class="space-y-4">
+        {[
+          {
+            num: '01',
+            title: 'Clone & deploy',
+            code: 'git clone https://github.com/ori129/agentsorg.git\ncd agentsorg && make up',
+            desc: 'Three Docker containers. Postgres with pgvector, FastAPI backend, React frontend. Everything wired up.',
+          },
+          {
+            num: '02',
+            title: 'Connect your workspace',
+            desc: 'Enter your OpenAI Compliance API key in the setup wizard. Or switch on Demo mode — no API key needed to explore the full platform.',
+          },
+          {
+            num: '03',
+            title: 'Run the pipeline',
+            desc: 'Fetch → Filter → Classify → Enrich → Embed → Store. Every GPT scored across 9 dimensions. Duplicates clustered. Risk flagged. Progress shown live.',
+          },
+          {
+            num: '04',
+            title: 'Act on intelligence',
+            desc: 'Leader Dashboard gives you the full picture. Employee Portal gives the org a place to discover what already exists.',
+          },
+        ].map(s => (
+          <div class="flex gap-6 p-7 rounded-2xl border border-border bg-surface hover:border-accent/30 transition-all group">
+            <span class="text-3xl font-black text-border group-hover:text-accent/30 transition-colors shrink-0 w-12 text-right">{s.num}</span>
+            <div class="flex-1">
+              <h3 class="text-lg font-bold mb-2">{s.title}</h3>
+              {s.code && (
+                <div class="font-mono text-xs bg-bg border border-border rounded-lg p-3 mb-3 text-text-muted whitespace-pre">{s.code}</div>
+              )}
+              <p class="text-text-muted text-sm leading-relaxed">{s.desc}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -258,28 +276,31 @@ const faqs = [
   <section id="roadmap" class="py-24 px-6 bg-surface">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Roadmap</h2>
-        <p class="text-text-muted text-lg">What's live today and where we're going.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Expanding across the Compliance API</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto">
+          Each phase unlocks a new data source from OpenAI's Compliance API — adding a new intelligence layer on top of the same foundation.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-5">
-        <!-- Now -->
+        <!-- Phase 1 -->
         <div class="p-7 rounded-2xl border border-accent/40 bg-bg">
-          <div class="flex items-center gap-2 mb-5">
+          <div class="flex items-center gap-2 mb-2">
             <span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
-            <span class="text-xs font-semibold text-green uppercase tracking-wider">Now — v1</span>
+            <span class="text-xs font-semibold text-green uppercase tracking-wider">Phase 1 — Live</span>
           </div>
-          <ul class="space-y-2.5">
+          <h3 class="text-lg font-bold mb-1">GPT & Project Intelligence</h3>
+          <p class="text-text-dim text-xs mb-5">API sources: GPTs · Projects · Configs</p>
+          <ul class="space-y-2">
             {[
-              'GPT discovery via Compliance API',
+              'Discovery via Compliance API',
               '9-KPI semantic enrichment',
-              'Risk flagging',
-              'Semantic duplicate detection',
-              'Builder recognition scores',
+              'Risk flagging & compliance scoring',
+              'Duplicate detection via pgvector',
+              'Builder recognition & scoring',
               'OpenAI Academy L&D recommendations',
-              'Workshop tracking',
+              'Workshop tracking & impact measurement',
               'Demo mode — no API key needed',
-              'Email-based auth & user roles',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-muted">
                 <svg class="w-4 h-4 text-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -289,19 +310,22 @@ const faqs = [
           </ul>
         </div>
 
-        <!-- Coming -->
+        <!-- Phase 2 -->
         <div class="p-7 rounded-2xl border border-border bg-bg">
-          <div class="flex items-center gap-2 mb-5">
+          <div class="flex items-center gap-2 mb-2">
             <span class="w-2 h-2 rounded-full bg-violet"></span>
-            <span class="text-xs font-semibold text-violet uppercase tracking-wider">Coming — v2</span>
+            <span class="text-xs font-semibold text-violet uppercase tracking-wider">Phase 2 — Coming</span>
           </div>
-          <ul class="space-y-2.5">
+          <h3 class="text-lg font-bold mb-1">Usage & People Intelligence</h3>
+          <p class="text-text-dim text-xs mb-5">API sources: Conversations · Users · Logs</p>
+          <ul class="space-y-2">
             {[
-              'Conversation analytics',
-              'Usage-based adoption scoring',
+              'Conversation analytics (volume, patterns)',
+              'User-level AI adoption scoring',
+              'Department & role benchmarking',
               'Cost attribution per GPT',
-              'Department benchmarking',
-              'Automated portfolio reports',
+              'Compliance log analysis',
+              'Automated portfolio health reports',
               'GPT lifecycle tracking',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-muted">
@@ -312,20 +336,23 @@ const faqs = [
           </ul>
         </div>
 
-        <!-- Vision -->
+        <!-- Phase 3 -->
         <div class="p-7 rounded-2xl border border-border bg-bg">
-          <div class="flex items-center gap-2 mb-5">
+          <div class="flex items-center gap-2 mb-2">
             <span class="w-2 h-2 rounded-full bg-text-dim"></span>
-            <span class="text-xs font-semibold text-text-dim uppercase tracking-wider">Vision</span>
+            <span class="text-xs font-semibold text-text-dim uppercase tracking-wider">Phase 3 — Vision</span>
           </div>
-          <ul class="space-y-2.5">
+          <h3 class="text-lg font-bold mb-1">Full AI Work Surface</h3>
+          <p class="text-text-dim text-xs mb-5">API sources: Automations · Canvases · Memories · Recordings · Codex</p>
+          <ul class="space-y-2">
             {[
-              'Slack & Teams alerts',
-              'Auto-generated governance policies',
-              'Builder certification',
-              'Copilot Studio & Gemini support',
-              'Cross-org benchmarking',
-              'Enterprise SaaS offering',
+              'Automation governance & audit',
+              'Canvas knowledge mapping',
+              'Memory footprint analysis',
+              'Recording transcript intelligence',
+              'Codex task analytics',
+              'Cross-source AI maturity score',
+              'Executive board-ready reporting',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-dim">
                 <svg class="w-4 h-4 text-text-dim/40 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>
@@ -370,7 +397,7 @@ const faqs = [
             <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
           </div>
           <h3 class="font-semibold mb-2 group-hover:text-accent transition-colors">Contribute</h3>
-          <p class="text-text-muted text-sm">PRs welcome. Apache 2.0.</p>
+          <p class="text-text-muted text-sm">PRs welcome. Apache 2.0. Each new phase is a contribution opportunity.</p>
         </a>
         <a href="https://github.com/ori129/agentsorg/discussions" target="_blank"
           class="p-7 rounded-2xl border border-border bg-bg hover:border-accent/30 transition-all group text-center">
@@ -378,7 +405,7 @@ const faqs = [
             <svg class="w-5 h-5 text-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
           </div>
           <h3 class="font-semibold mb-2 group-hover:text-violet transition-colors">Discuss</h3>
-          <p class="text-text-muted text-sm">Questions, ideas, show & tell.</p>
+          <p class="text-text-muted text-sm">Shape the roadmap. Questions, ideas, and show & tell.</p>
         </a>
         <a href="https://github.com/ori129/agentsorg/issues" target="_blank"
           class="p-7 rounded-2xl border border-border bg-bg hover:border-accent/30 transition-all group text-center">
@@ -423,8 +450,8 @@ const faqs = [
   <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
   <section class="py-24 px-6 bg-surface">
     <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Start in 5 minutes.</h2>
-      <p class="text-text-muted text-lg mb-10">Demo mode included. No API key. No signup.</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Start the intelligence layer today.</h2>
+      <p class="text-text-muted text-lg mb-10">Demo mode included. No API key. No signup. Under 5 minutes.</p>
       <div class="p-5 rounded-2xl border border-border bg-bg font-mono text-left mb-8 text-sm">
         <div><span class="text-text-dim select-none">$ </span><span class="text-text">git clone https://github.com/ori129/agentsorg.git</span></div>
         <div><span class="text-text-dim select-none">$ </span><span class="text-text">cd agentsorg && make up</span></div>
