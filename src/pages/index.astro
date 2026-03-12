@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 // What the Compliance API actually exposes — the full surface
 const apiSurface = [
   { name: 'Custom GPTs', phase: 1, icon: '🤖' },
-  { name: 'Projects', phase: 1, icon: '📁' },
+  { name: 'Projects', phase: 2, icon: '📁' },
   { name: 'Conversations', phase: 2, icon: '💬' },
   { name: 'Users & Behavior', phase: 2, icon: '👥' },
   { name: 'Automations', phase: 3, icon: '⚡' },
@@ -161,9 +161,9 @@ const faqs = [
         <span class="text-xs font-semibold text-green uppercase tracking-wider">Phase 1 — Live Today</span>
       </div>
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">GPT & Project Governance</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Custom GPT Governance</h2>
         <p class="text-text-muted text-lg max-w-xl mx-auto">
-          The first intelligence module. Every Custom GPT and Project in your workspace — discovered, scored, and acted on.
+          The first intelligence module. Every Custom GPT in your workspace — discovered, scored, and acted on.
         </p>
       </div>
 
@@ -289,8 +289,8 @@ const faqs = [
             <span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
             <span class="text-xs font-semibold text-green uppercase tracking-wider">Phase 1 — Live</span>
           </div>
-          <h3 class="text-lg font-bold mb-1">GPT & Project Intelligence</h3>
-          <p class="text-text-dim text-xs mb-5">API sources: GPTs · Projects · Configs</p>
+          <h3 class="text-lg font-bold mb-1">Custom GPT Intelligence</h3>
+          <p class="text-text-dim text-xs mb-5">API sources: GPTs · GPT Configs · GPT Files</p>
           <ul class="space-y-2">
             {[
               'Discovery via Compliance API',
@@ -317,7 +317,7 @@ const faqs = [
             <span class="text-xs font-semibold text-violet uppercase tracking-wider">Phase 2 — Coming</span>
           </div>
           <h3 class="text-lg font-bold mb-1">Usage & People Intelligence</h3>
-          <p class="text-text-dim text-xs mb-5">API sources: Conversations · Users · Logs</p>
+          <p class="text-text-dim text-xs mb-5">API sources: Projects · Conversations · Users · Logs</p>
           <ul class="space-y-2">
             {[
               'Conversation analytics (volume, patterns)',
