@@ -18,6 +18,9 @@ Built for AI Transformation Leaders at organizations running ChatGPT Enterprise 
 
 ## Blog posts
 
+- [The AI Center of Excellence Playbook for ChatGPT Enterprise](https://agentsorg.ai/blog/ai-center-of-excellence-playbook): How to build an AI CoE with a three-layer org structure, four-tier governance model, and 60-day launch plan
+- [How to Measure ROI on ChatGPT Enterprise (Without Guessing)](https://agentsorg.ai/blog/chatgpt-enterprise-roi-measurement): Data-driven ROI framework using five portfolio-level metrics — maturity distribution, duplication rate, builder concentration, adoption friction, process coverage
+- [Shadow AI: How to Discover What's Actually Running in Your ChatGPT Workspace](https://agentsorg.ai/blog/shadow-ai-discovery-enterprise): Practical framework for discovering, risk-scoring, and governing ungoverned Custom GPTs before they become a liability
 - [What Is AI Transformation Intelligence?](https://agentsorg.ai/blog/ai-transformation-intelligence): Defines the discipline of using semantic analysis and automation to govern enterprise AI portfolios
 - [The GPT Portfolio Maturity Model](https://agentsorg.ai/blog/gpt-portfolio-maturity-model): Framework for classifying Custom GPTs as Experimental (60%), Functional (25%), or Production (15%)
 - [The Enterprise Custom GPT Governance Guide](https://agentsorg.ai/blog/enterprise-custom-gpt-governance-guide): Five-pillar framework for governing Custom GPTs at scale — discovery, assessment, risk, optimization, lifecycle
