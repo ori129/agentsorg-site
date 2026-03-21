@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 // What the Compliance API actually exposes — the full surface
 const apiSurface = [
   { name: 'Custom GPTs', phase: 1, icon: '🤖' },
-  { name: 'Projects', phase: 2, icon: '📁' },
+  { name: 'Projects', phase: 1, icon: '📁' },
   { name: 'Conversations', phase: 2, icon: '💬' },
   { name: 'Users & Behavior', phase: 2, icon: '👥' },
   { name: 'Automations', phase: 3, icon: '⚡' },
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Is this production-ready?',
-    a: 'Yes. Custom GPT governance — discovery, risk flagging, duplicate detection, builder scoring, and L&D recommendations — is fully built and running in production today. Demo mode lets you explore everything without an API key.',
+    a: 'Yes. Custom GPT and Project governance — discovery, risk flagging, duplicate detection, builder scoring, and L&D recommendations — is fully built and running in production today. Demo mode lets you explore everything without an API key.',
   },
   {
     q: 'How is this different from the OpenAI admin console?',
@@ -41,7 +41,7 @@ const faqs = [
 
 <Base
   title="AgentsOrg — Finally know what your team is building with ChatGPT"
-  description="See every GPT your team has built. Flag what's risky. Stop duplicates. Prove ROI. Open-source governance for ChatGPT Enterprise."
+  description="See every GPT and Project your team has built. Flag what's risky. Stop duplicates. Prove ROI. Open-source governance for ChatGPT Enterprise."
 >
 
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
@@ -61,7 +61,7 @@ const faqs = [
       </h1>
 
       <p class="text-lg md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 animate-fade-in animate-delay-2 leading-relaxed">
-        See every GPT across your org. Flag what's risky. Eliminate duplicates. Identify your best AI builders. Prove ROI — before your next renewal.
+        See every GPT and Project across your org. Flag what's risky. Eliminate duplicates. Identify your best AI builders. Prove ROI — before your next renewal.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-3">
@@ -120,6 +120,7 @@ const faqs = [
       <div class="flex flex-wrap justify-center gap-2 mb-6" id="ss-tabs">
         {[
           { id: 'overview',     label: 'Overview' },
+          { id: 'projects',     label: 'Projects' },
           { id: 'employee',     label: 'Employee Portal' },
           { id: 'risk',         label: 'Risk Panel' },
           { id: 'duplicates',   label: 'Duplicates' },
@@ -140,8 +141,9 @@ const faqs = [
       <!-- Screenshot panels -->
       <div class="relative rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/40">
         {[
-          { id: 'overview',    src: '/ss_overview.png',    alt: 'AI Portfolio Overview dashboard — 500 GPTs, risk flags, creation velocity, department breakdown',   caption: '500 GPTs. Instant portfolio view.' },
-          { id: 'employee',    src: '/ss_employee.png',    alt: 'Employee Portal — browse 277 GPTs by category, search by role or need',                             caption: 'Every GPT, discoverable by anyone. Fewer duplicate builds.' },
+          { id: 'overview',    src: '/ss_overview.png',    alt: 'AI Portfolio Overview dashboard — GPTs and Projects, risk flags, creation velocity, department breakdown',   caption: '500 GPTs & Projects. Instant portfolio view.' },
+          { id: 'projects',    src: '/ss_users.png',       alt: 'Projects analytics — user adoption, team-level activity, Project inventory across the org',          caption: 'See every Project across your org. Who owns it, who\'s active, what\'s inside.' },
+          { id: 'employee',    src: '/ss_employee.png',    alt: 'Employee Portal — browse GPTs and Projects by category, search by role or need',                      caption: 'Every GPT and Project, discoverable by anyone. Fewer duplicate builds.' },
           { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel — GPTs flagged by severity, data exposure, compliance gaps',                             caption: '50 high-risk GPTs flagged automatically.' },
           { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection — semantic clustering identifies redundant GPT builds',                         caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
           { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores — per-GPT sophistication, prompting quality, ROI potential',                         caption: 'See the gap between your best and weakest builders.' },
@@ -202,7 +204,7 @@ const faqs = [
           {
             color: 'red',
             title: 'No inventory',
-            desc: 'Your OpenAI admin console shows you what exists. Not what\'s dangerous, redundant, or wasted. Hundreds of GPTs built across the org — with no risk assessment and no quality signal.',
+            desc: 'Your OpenAI admin console shows you what exists. Not what\'s dangerous, redundant, or wasted. Hundreds of GPTs and Projects built across the org — with no risk assessment and no quality signal.',
           },
           {
             color: 'amber',
@@ -234,7 +236,7 @@ const faqs = [
       <div class="text-center mb-8 md:mb-14">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything leaders need. In one place.</h2>
         <p class="text-text-muted text-lg max-w-xl mx-auto">
-          Every Custom GPT in your workspace — discovered, scored, and acted on.
+          Every Custom GPT and Project in your workspace — discovered, scored, and acted on.
         </p>
       </div>
 
@@ -278,7 +280,7 @@ const faqs = [
             <span class="text-text-dim text-sm">For the whole org</span>
           </div>
           <p class="text-text-muted text-sm leading-relaxed">
-            Read-only GPT discovery for every employee. Find what already exists before building another duplicate.
+            Read-only GPT and Project discovery for every employee. Find what already exists before building another duplicate.
           </p>
         </div>
 
@@ -346,7 +348,7 @@ const faqs = [
   <section id="roadmap" class="py-14 md:py-24 px-4 sm:px-6 bg-surface">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-8 md:mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">From GPT governance to full AI intelligence</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">From GPT & Project governance to full AI intelligence</h2>
         <p class="text-text-muted text-lg max-w-2xl mx-auto">
           Each phase answers a bigger question about your org's AI investment.
         </p>
@@ -360,10 +362,10 @@ const faqs = [
             <span class="text-xs font-semibold text-green uppercase tracking-wider">Live Today</span>
           </div>
           <h3 class="text-lg font-bold mb-1">What are we building?<br/>Is it safe?</h3>
-          <p class="text-text-dim text-xs mb-5">Custom GPTs · Configs · Files</p>
+          <p class="text-text-dim text-xs mb-5">Custom GPTs · Projects · Configs · Files</p>
           <ul class="space-y-2">
             {[
-              'Full GPT portfolio discovery',
+              'Full GPT & Project portfolio discovery',
               'Risk flagging & compliance scoring',
               'Duplicate detection — automatic',
               'Quality scores across 9 dimensions',
@@ -387,7 +389,7 @@ const faqs = [
             <span class="text-xs font-semibold text-violet uppercase tracking-wider">Coming</span>
           </div>
           <h3 class="text-lg font-bold mb-1">Who's actually using AI?<br/>How much?</h3>
-          <p class="text-text-dim text-xs mb-5">Projects · Conversations · Users · Logs</p>
+          <p class="text-text-dim text-xs mb-5">Conversations · Users · Logs</p>
           <ul class="space-y-2">
             {[
               'Conversation analytics (volume, patterns)',
@@ -442,7 +444,7 @@ const faqs = [
         <div class="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
         <h2 class="text-3xl md:text-4xl font-bold mb-4 relative">AI Transformation Advisors</h2>
         <p class="text-text-muted text-base sm:text-lg mb-6 sm:mb-8 max-w-xl mx-auto relative leading-relaxed">
-          Use AgentsOrg as your client assessment toolkit. Run a GPT portfolio audit in minutes. Get listed in our directory of 50+ advisors.
+          Use AgentsOrg as your client assessment toolkit. Run a GPT & Project portfolio audit in minutes. Get listed in our directory of 50+ advisors.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
           <a href="/advisors" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all text-sm">
@@ -520,7 +522,7 @@ const faqs = [
   <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
   <section class="py-14 md:py-24 px-4 sm:px-6 bg-surface">
     <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">See your GPT portfolio in 5 minutes.</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">See your GPT & Project portfolio in 5 minutes.</h2>
       <p class="text-text-muted text-base sm:text-lg mb-8">No API key. No signup. Demo mode included.</p>
       <a
         href="https://github.com/ori129/agentsorg#quick-start"
