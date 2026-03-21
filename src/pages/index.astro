@@ -120,7 +120,9 @@ const faqs = [
       <div class="flex flex-wrap justify-center gap-2 mb-6" id="ss-tabs">
         {[
           { id: 'overview',     label: 'Overview' },
-          { id: 'projects',     label: 'Projects' },
+          { id: 'maturity',     label: 'Portfolio Maturity' },
+          { id: 'builders',     label: 'Builders' },
+          { id: 'departments',  label: 'Departments' },
           { id: 'employee',     label: 'Employee Portal' },
           { id: 'risk',         label: 'Risk Panel' },
           { id: 'duplicates',   label: 'Duplicates' },
@@ -141,9 +143,11 @@ const faqs = [
       <!-- Screenshot panels -->
       <div class="relative rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/40">
         {[
-          { id: 'overview',    src: '/ss_overview.png',    alt: 'AI Portfolio Overview dashboard: GPTs and Projects, risk flags, creation velocity, department breakdown',   caption: '500 GPTs & Projects. Instant portfolio view.' },
-          { id: 'projects',    src: '/ss_users.png',       alt: 'Projects analytics: user adoption, team-level activity, Project inventory across the org',          caption: 'See every Project across your org. Who owns it, who\'s active, what\'s inside.' },
-          { id: 'employee',    src: '/ss_employee.png',    alt: 'Employee Portal: browse GPTs and Projects by category, search by role or need',                      caption: 'Every GPT and Project, discoverable by anyone. Fewer duplicate builds.' },
+          { id: 'overview',    src: '/ss_overview.png',             alt: 'AI Portfolio Overview: KPIs, risk flags, creation velocity, department and process breakdown',    caption: '500 GPTs. Instant portfolio view.' },
+          { id: 'maturity',    src: '/ss_overview_maturity.png',   alt: 'Portfolio Maturity: GPTs classified as Production, Functional, or Experimental with quality scores', caption: 'Know exactly which GPTs are production-grade and which need work.' },
+          { id: 'builders',    src: '/ss_overview_builders.png',   alt: 'Builders view: every GPT creator ranked by quality, adoption, hygiene, and volume',                 caption: 'See every builder in your org ranked by AI output quality.' },
+          { id: 'departments', src: '/ss_overview_departments.png',alt: 'Departments view: AI adoption and asset count broken down by department',                          caption: 'Understand AI adoption across every team.' },
+          { id: 'employee',    src: '/ss_employee.png',            alt: 'Employee Portal: browse GPTs and Projects by category, search by role or need',                    caption: 'Every GPT, discoverable by anyone. Fewer duplicate builds.' },
           { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel: GPTs flagged by severity, data exposure, compliance gaps',                             caption: '50 high-risk GPTs flagged automatically.' },
           { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection: semantic clustering identifies redundant GPT builds',                         caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
           { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores: per-GPT sophistication, prompting quality, ROI potential',                         caption: 'See the gap between your best and weakest builders.' },
