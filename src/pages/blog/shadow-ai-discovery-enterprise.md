@@ -12,7 +12,7 @@ Your AI governance program probably has a blind spot.
 
 You've documented your AI vendors. You've reviewed your ML models in production. You've audited your data pipelines. But there's an entire category of AI that your governance framework almost certainly doesn't cover: the Custom GPTs your employees built themselves, last quarter, in an afternoon, without telling anyone.
 
-This is shadow AI — and in most enterprises running ChatGPT Enterprise, it's not a fringe phenomenon. It's the majority of your AI footprint.
+This is shadow AI: and in most enterprises running ChatGPT Enterprise, it's not a fringe phenomenon. It's the majority of your AI footprint.
 
 ## What Is Shadow AI?
 
@@ -23,7 +23,7 @@ Shadow AI is any AI asset created or used by employees outside of formal IT appr
 - **External integrations** connected to GPTs without security review
 - **Data flows** where employees feed sensitive documents into AI systems with no logging
 
-Unlike traditional shadow IT — where employees install unauthorized software — shadow AI creates *behavior*. A Custom GPT built by a sales rep that's connected to your CRM API and generates customer proposals represents an autonomous process operating on company data, at scale, without review.
+Unlike traditional shadow IT: where employees install unauthorized software: shadow AI creates *behavior*. A Custom GPT built by a sales rep that's connected to your CRM API and generates customer proposals represents an autonomous process operating on company data, at scale, without review.
 
 ## Why Shadow AI Happens
 
@@ -51,7 +51,7 @@ GPTs with access to sensitive data through file uploads, Knowledge bases, or API
 
 ### Category 2: Compliance Risk
 
-GPTs operating in regulated domains — legal contract review, HR decisions, financial analysis, patient-facing healthcare workflows — without the safeguards required by your compliance framework.
+GPTs operating in regulated domains: legal contract review, HR decisions, financial analysis, patient-facing healthcare workflows: without the safeguards required by your compliance framework.
 
 **Signs to look for:** GPT names or descriptions referencing HR, legal, compliance, medical, or financial processes; system prompts that instruct the GPT to make recommendations or decisions.
 
@@ -120,7 +120,7 @@ For each high-risk GPT, you have four options:
 3. **Consolidate**: If it duplicates an approved GPT, redirect users and retire the duplicate
 4. **Retire**: Disable GPTs that represent unacceptable risk or have no active users
 
-The goal is not to eliminate all shadow AI — it's to convert ungoverned AI into governed AI.
+The goal is not to eliminate all shadow AI: it's to convert ungoverned AI into governed AI.
 
 ## Building Ongoing Shadow AI Governance
 
@@ -146,7 +146,7 @@ The best programs do the opposite: they find these builders, recognize their wor
 
 If you're running ChatGPT Enterprise or Team and you don't have a current inventory of your Custom GPTs with semantic classification and risk scores, you have a shadow AI problem.
 
-AgentsOrg automates the entire discovery and classification pipeline — connecting to OpenAI's Compliance API, extracting full GPT metadata, running semantic enrichment across 9 dimensions, and surfacing risk flags in a governance dashboard.
+AgentsOrg automates the entire discovery and classification pipeline: connecting to OpenAI's Compliance API, extracting full GPT metadata, running semantic enrichment across 9 dimensions, and surfacing risk flags in a governance dashboard.
 
 ```bash
 git clone https://github.com/ori129/agentsorg.git

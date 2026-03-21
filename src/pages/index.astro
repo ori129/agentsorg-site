@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// What the Compliance API actually exposes — the full surface
+// What the Compliance API actually exposes: the full surface
 const apiSurface = [
   { name: 'Custom GPTs', phase: 1, icon: '🤖' },
   { name: 'Projects', phase: 1, icon: '📁' },
@@ -18,7 +18,7 @@ const apiSurface = [
 const faqs = [
   {
     q: 'Is this affiliated with OpenAI?',
-    a: 'No. Independent open-source project. Integrates with OpenAI\'s Compliance API, GPT API, and Embeddings API — not endorsed by OpenAI.',
+    a: 'No. Independent open-source project. Integrates with OpenAI\'s Compliance API, GPT API, and Embeddings API. Not endorsed by OpenAI.',
   },
   {
     q: 'Does my data leave my infrastructure?',
@@ -26,21 +26,21 @@ const faqs = [
   },
   {
     q: 'Is this production-ready?',
-    a: 'Yes. Custom GPT and Project governance — discovery, risk flagging, duplicate detection, builder scoring, and L&D recommendations — is fully built and running in production today. Demo mode lets you explore everything without an API key.',
+    a: 'Yes. Custom GPT and Project governance (discovery, risk flagging, duplicate detection, builder scoring, and L&D recommendations) is fully built and running in production today. Demo mode lets you explore everything without an API key.',
   },
   {
     q: 'How is this different from the OpenAI admin console?',
-    a: 'The admin console is for managing users. AgentsOrg is for understanding what all those users are building — and whether it\'s safe, redundant, or worth the investment. Different purpose entirely.',
+    a: 'The admin console is for managing users. AgentsOrg is for understanding what all those users are building, and whether it\'s safe, redundant, or worth the investment. Different purpose entirely.',
   },
   {
     q: 'What\'s the ROI? How do I justify this to my CFO?',
-    a: 'Three concrete numbers: (1) Duplicate removal — every redundant GPT represents 20–40 hours of build time wasted. Find 9 clusters, recover 160+ hours. (2) Risk prevention — one ungoverned GPT exposing sensitive data costs far more than the tool. (3) Training prioritization — L&D spend goes to builders who actually need it, not a blanket rollout.',
+    a: 'Three concrete numbers: (1) Duplicate removal: every redundant GPT represents 20-40 hours of build time wasted. Find 9 clusters, recover 160+ hours. (2) Risk prevention: one ungoverned GPT exposing sensitive data costs far more than the tool. (3) Training prioritization: L&D spend goes to builders who actually need it, not a blanket rollout.',
   },
 ];
 ---
 
 <Base
-  title="AgentsOrg — Finally know what your team is building with ChatGPT"
+  title="AgentsOrg | Finally know what your team is building with ChatGPT"
   description="See every GPT and Project your team has built. Flag what's risky. Stop duplicates. Prove ROI. Open-source governance for ChatGPT Enterprise."
 >
 
@@ -61,7 +61,7 @@ const faqs = [
       </h1>
 
       <p class="text-lg md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 animate-fade-in animate-delay-2 leading-relaxed">
-        See every GPT and Project across your org. Flag what's risky. Eliminate duplicates. Identify your best AI builders. Prove ROI — before your next renewal.
+        See every GPT and Project across your org. Flag what's risky. Eliminate duplicates. Identify your best AI builders. Prove ROI before your next renewal.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-3">
@@ -70,7 +70,7 @@ const faqs = [
           target="_blank"
           class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all hover:shadow-xl hover:shadow-accent/25 text-sm"
         >
-          Try Demo — no API key, no signup
+          Try Demo. No API key, no signup.
         </a>
         <a
           href="https://github.com/ori129/agentsorg"
@@ -82,9 +82,9 @@ const faqs = [
         </a>
       </div>
 
-      <!-- Compliance API surface map — what's covered -->
+      <!-- Compliance API surface map: what's covered -->
       <div class="max-w-3xl mx-auto animate-fade-in animate-delay-4">
-        <div class="text-xs text-text-dim uppercase tracking-wider mb-4">What AgentsOrg covers — today and on the roadmap</div>
+        <div class="text-xs text-text-dim uppercase tracking-wider mb-4">What AgentsOrg covers, today and on the roadmap</div>
         <div class="flex flex-wrap justify-center gap-2">
           {apiSurface.map(s => (
             <span class={`px-3 py-1.5 rounded-full text-xs border flex items-center gap-1.5 ${
@@ -113,7 +113,7 @@ const faqs = [
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-8 md:mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">See it in action</h2>
-        <p class="text-text-muted text-lg max-w-xl mx-auto">Try the demo — no API key, no signup. Or explore the screens below.</p>
+        <p class="text-text-muted text-lg max-w-xl mx-auto">Try the demo. No API key, no signup. Or explore the screens below.</p>
       </div>
 
       <!-- Tab bar -->
@@ -141,15 +141,15 @@ const faqs = [
       <!-- Screenshot panels -->
       <div class="relative rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/40">
         {[
-          { id: 'overview',    src: '/ss_overview.png',    alt: 'AI Portfolio Overview dashboard — GPTs and Projects, risk flags, creation velocity, department breakdown',   caption: '500 GPTs & Projects. Instant portfolio view.' },
-          { id: 'projects',    src: '/ss_users.png',       alt: 'Projects analytics — user adoption, team-level activity, Project inventory across the org',          caption: 'See every Project across your org. Who owns it, who\'s active, what\'s inside.' },
-          { id: 'employee',    src: '/ss_employee.png',    alt: 'Employee Portal — browse GPTs and Projects by category, search by role or need',                      caption: 'Every GPT and Project, discoverable by anyone. Fewer duplicate builds.' },
-          { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel — GPTs flagged by severity, data exposure, compliance gaps',                             caption: '50 high-risk GPTs flagged automatically.' },
-          { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection — semantic clustering identifies redundant GPT builds',                         caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
-          { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores — per-GPT sophistication, prompting quality, ROI potential',                         caption: 'See the gap between your best and weakest builders.' },
-          { id: 'recognition', src: '/ss_recognition.png', alt: 'Builder Recognition — composite scores across quality, adoption, hygiene, volume',                  caption: 'Know who your best AI builders are. Recognize them.' },
-          { id: 'learning',    src: '/ss_learning.png',    alt: 'Learning — LLM-powered OpenAI Academy course recommendations per builder',                          caption: 'Targeted training based on each builder\'s actual gaps.' },
-          { id: 'workshops',   src: '/ss_workshops.png',   alt: 'Workshops — track L&D events and measure GPT quality impact over time',                             caption: 'Track training ROI. Before vs. after GPT quality scores.' },
+          { id: 'overview',    src: '/ss_overview.png',    alt: 'AI Portfolio Overview dashboard: GPTs and Projects, risk flags, creation velocity, department breakdown',   caption: '500 GPTs & Projects. Instant portfolio view.' },
+          { id: 'projects',    src: '/ss_users.png',       alt: 'Projects analytics: user adoption, team-level activity, Project inventory across the org',          caption: 'See every Project across your org. Who owns it, who\'s active, what\'s inside.' },
+          { id: 'employee',    src: '/ss_employee.png',    alt: 'Employee Portal: browse GPTs and Projects by category, search by role or need',                      caption: 'Every GPT and Project, discoverable by anyone. Fewer duplicate builds.' },
+          { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel: GPTs flagged by severity, data exposure, compliance gaps',                             caption: '50 high-risk GPTs flagged automatically.' },
+          { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection: semantic clustering identifies redundant GPT builds',                         caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
+          { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores: per-GPT sophistication, prompting quality, ROI potential',                         caption: 'See the gap between your best and weakest builders.' },
+          { id: 'recognition', src: '/ss_recognition.png', alt: 'Builder Recognition: composite scores across quality, adoption, hygiene, volume',                  caption: 'Know who your best AI builders are. Recognize them.' },
+          { id: 'learning',    src: '/ss_learning.png',    alt: 'Learning: LLM-powered OpenAI Academy course recommendations per builder',                          caption: 'Targeted training based on each builder\'s actual gaps.' },
+          { id: 'workshops',   src: '/ss_workshops.png',   alt: 'Workshops: track L&D events and measure GPT quality impact over time',                             caption: 'Track training ROI. Before vs. after GPT quality scores.' },
         ].map((panel, i) => (
           <div data-panel={panel.id} class={`ss-panel ${i !== 0 ? 'hidden' : ''}`}>
             <img
@@ -195,7 +195,7 @@ const faqs = [
       <div class="text-center mb-8 md:mb-14">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">The data is there. The intelligence isn't.</h2>
         <p class="text-text-muted text-lg max-w-2xl mx-auto">
-          OpenAI gives enterprise admins full visibility into their workspace. But visibility isn't intelligence — and right now, most leaders are flying blind.
+          OpenAI gives enterprise admins full visibility into their workspace. But visibility isn't intelligence, and right now, most leaders are flying blind.
         </p>
       </div>
 
@@ -204,12 +204,12 @@ const faqs = [
           {
             color: 'red',
             title: 'No inventory',
-            desc: 'Your OpenAI admin console shows you what exists. Not what\'s dangerous, redundant, or wasted. Hundreds of GPTs and Projects built across the org — with no risk assessment and no quality signal.',
+            desc: 'Your OpenAI admin console shows you what exists. Not what\'s dangerous, redundant, or wasted. Hundreds of GPTs and Projects built across the org, with no risk assessment and no quality signal.',
           },
           {
             color: 'amber',
             title: 'No patterns',
-            desc: 'You don\'t know who your best AI builders are. Or who needs training. Or which GPTs are doing the same thing. The data exists — it\'s just unexplored.',
+            desc: 'You don\'t know who your best AI builders are. Or who needs training. Or which GPTs are doing the same thing. The data exists. It\'s just unexplored.',
           },
           {
             color: 'accent',
@@ -236,7 +236,7 @@ const faqs = [
       <div class="text-center mb-8 md:mb-14">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything leaders need. In one place.</h2>
         <p class="text-text-muted text-lg max-w-xl mx-auto">
-          Every Custom GPT and Project in your workspace — discovered, scored, and acted on.
+          Every Custom GPT and Project in your workspace: discovered, scored, and acted on.
         </p>
       </div>
 
@@ -249,7 +249,7 @@ const faqs = [
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             {[
               { name: 'Overview', color: 'accent', desc: 'Portfolio KPIs, creation velocity, drill-downs by builder, department, maturity, business process, output type.' },
-              { name: 'Risk Panel', color: 'red', desc: 'Every GPT flagged by severity. Data exposure, compliance gaps, ungoverned builds — surfaced automatically.' },
+              { name: 'Risk Panel', color: 'red', desc: 'Every GPT flagged by severity. Data exposure, compliance gaps, ungoverned builds, surfaced automatically.' },
               { name: 'Duplicates', color: 'violet', desc: 'Finds duplicate GPTs automatically, even with different names. See exactly how many rebuild hours were wasted.' },
               { name: 'Quality Scores', color: 'amber', desc: 'Prompting quality distribution across the portfolio. See the gap between your best and weakest builders.' },
             ].map(item => (
@@ -262,7 +262,7 @@ const faqs = [
           <div class="grid sm:grid-cols-3 gap-4">
             {[
               { name: 'Recognition', color: 'green', desc: 'Composite builder scores across quality, adoption, hygiene, and volume. Know who to promote and who to support.' },
-              { name: 'Learning', color: 'green', desc: 'AI-recommended training per builder based on actual skill gaps — not a generic course catalog.' },
+              { name: 'Learning', color: 'green', desc: 'AI-recommended training per builder based on actual skill gaps, not a generic course catalog.' },
               { name: 'Workshops', color: 'green', desc: 'Track in-person sessions. Participant lists. GPT tagging. Measure quality improvement before vs after.' },
             ].map(item => (
               <div class={`p-5 rounded-xl border border-border bg-surface hover:border-${item.color}/30 transition-colors`}>
@@ -311,12 +311,12 @@ const faqs = [
             num: '01',
             title: 'Clone & deploy',
             code: 'git clone https://github.com/ori129/agentsorg.git\ncd agentsorg && make up',
-            desc: 'Your IT team deploys in ~5 minutes. Three Docker containers — Postgres, FastAPI backend, React frontend. Everything wired up.',
+            desc: 'Your IT team deploys in ~5 minutes. Three Docker containers: Postgres, FastAPI backend, React frontend. Everything wired up.',
           },
           {
             num: '02',
             title: 'Try demo mode first',
-            desc: 'No API key needed. Switch on Demo mode to explore the full platform — risk panel, duplicates, quality scores, builder recognition — with realistic sample data. Connect your real workspace when you\'re ready.',
+            desc: 'No API key needed. Switch on Demo mode to explore the full platform: risk panel, duplicates, quality scores, builder recognition, with realistic sample data. Connect your real workspace when you\'re ready.',
           },
           {
             num: '03',
@@ -367,12 +367,12 @@ const faqs = [
             {[
               'Full GPT & Project portfolio discovery',
               'Risk flagging & compliance scoring',
-              'Duplicate detection — automatic',
+              'Automatic duplicate detection',
               'Quality scores across 9 dimensions',
               'Builder recognition & scoring',
               'AI-powered L&D recommendations',
               'Workshop tracking & impact measurement',
-              'Demo mode — no API key needed',
+              'Demo mode, no API key needed',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-muted">
                 <svg class="w-4 h-4 text-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -529,7 +529,7 @@ const faqs = [
         target="_blank"
         class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all hover:shadow-xl hover:shadow-accent/25 text-sm mb-6"
       >
-        Try demo — no API key, no signup
+        Try demo. No API key, no signup.
       </a>
       <div class="p-5 rounded-2xl border border-border bg-bg font-mono text-left text-sm overflow-x-auto">
         <div class="text-text-dim text-xs mb-2 uppercase tracking-wider">Or self-host in minutes</div>

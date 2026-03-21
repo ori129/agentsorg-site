@@ -5,7 +5,7 @@
  * 1. Copy an existing entry below
  * 2. Fill in all fields
  * 3. Set `featured: true` for top-row placement (use sparingly)
- * 4. Commit and push to main — site redeploys automatically in ~1 min
+ * 4. Commit and push to main. Site redeploys automatically in ~1 min
  */
 
 export interface Advisor {
@@ -396,7 +396,7 @@ export const advisors: Advisor[] = [
     role: "Futurist, Advisor & Author",
     specialization: "AI Strategy & Digital Transformation for Business",
     region: "Global",
-    bio: "Marr is an internationally bestselling author of 19 books on AI and data strategy—including AI Strategy and Generative AI in Practice—and a strategic advisor to Amazon, Google, Microsoft, IBM, and Toyota. LinkedIn ranks him among the top 5 business influencers globally and he contributes regularly to Forbes and the World Economic Forum.",
+    bio: "Marr is an internationally bestselling author of 19 books on AI and data strategy, including AI Strategy and Generative AI in Practice, and a strategic advisor to Amazon, Google, Microsoft, IBM, and Toyota. LinkedIn ranks him among the top 5 business influencers globally and he contributes regularly to Forbes and the World Economic Forum.",
     url: "https://bernardmarr.com/",
     featured: false,
   },

@@ -12,7 +12,7 @@ Your organization has 500 Custom GPTs. How many are actually delivering business
 
 If you're like most enterprises with ChatGPT Enterprise, the honest answer is: you don't know. Some GPTs were built in five minutes during a team meeting. Others represent weeks of careful prompt engineering, tool integration, and user testing. From the admin console, they all look the same.
 
-The **GPT Portfolio Maturity Model** is a framework for classifying every Custom GPT in your workspace by the depth and quality of its configuration — turning an opaque list into an actionable intelligence map.
+The **GPT Portfolio Maturity Model** is a framework for classifying every Custom GPT in your workspace by the depth and quality of its configuration: turning an opaque list into an actionable intelligence map.
 
 ## The Three Tiers
 
@@ -46,7 +46,7 @@ These GPTs represent the natural "try it and see" phase of AI adoption. Someone 
 - Used regularly by the creator, sometimes shared with team
 
 **What it means:**
-These GPTs are delivering value but haven't been optimized. They solve a real problem, but the implementation has room to grow — better prompt engineering, tool integration, quality safeguards, or broader distribution.
+These GPTs are delivering value but haven't been optimized. They solve a real problem, but the implementation has room to grow: better prompt engineering, tool integration, quality safeguards, or broader distribution.
 
 **Typical characteristics:**
 - Created by someone with moderate ChatGPT experience
@@ -79,11 +79,11 @@ After analyzing GPT portfolios across organizations, a consistent pattern emerge
 
 | Tier | Percentage | Implication |
 |------|-----------|-------------|
-| Experimental | ~60% | Natural exploration — but creates noise, duplicates, and governance overhead |
-| Functional | ~25% | The growth opportunity — targeted upskilling moves these toward Production |
-| Production | ~15% | The proof of value — these justify the ChatGPT Enterprise investment |
+| Experimental | ~60% | Natural exploration: but creates noise, duplicates, and governance overhead |
+| Functional | ~25% | The growth opportunity: targeted upskilling moves these toward Production |
+| Production | ~15% | The proof of value: these justify the ChatGPT Enterprise investment |
 
-This 60/25/15 distribution isn't inherently bad. It reflects healthy organic adoption — people experimenting, finding what works, and investing in what delivers value. The problem is when you can't *see* this distribution. Without measurement, you can't:
+This 60/25/15 distribution isn't inherently bad. It reflects healthy organic adoption: people experimenting, finding what works, and investing in what delivers value. The problem is when you can't *see* this distribution. Without measurement, you can't:
 
 - **Retire** the 60% that's creating noise
 - **Upskill** the 25% that's close to Production
@@ -125,8 +125,8 @@ The Sophistication Score isn't a simple heuristic. It's derived from **semantic 
 The maturity distribution is your first dashboard metric. Track it over time:
 
 - **Improving:** Experimental percentage shrinking, Functional and Production growing
-- **Stagnant:** Distribution unchanged quarter over quarter — training isn't working or isn't reaching the right people
-- **Growing but immature:** Total GPT count rising but Experimental percentage also rising — creation is outpacing capability building
+- **Stagnant:** Distribution unchanged quarter over quarter: training isn't working or isn't reaching the right people
+- **Growing but immature:** Total GPT count rising but Experimental percentage also rising: creation is outpacing capability building
 
 ### For L&D Teams
 
@@ -145,16 +145,16 @@ The key insight: don't give everyone the same training. An Experimental builder 
 The maturity model informs risk prioritization:
 
 - **Experimental GPTs** are low risk individually (simple prompts, no integrations) but high risk collectively (noise, duplicates, ungoverned data handling)
-- **Functional GPTs** need review — they're handling real data but may lack proper safeguards
-- **Production GPTs** warrant full governance review — they're critical enough that failures have real business impact
+- **Functional GPTs** need review: they're handling real data but may lack proper safeguards
+- **Production GPTs** warrant full governance review: they're critical enough that failures have real business impact
 
 ### For Finance / ROI
 
 The model directly answers the ROI question:
 
 - Count Production GPTs and estimate time savings per GPT
-- Identify Functional GPTs close to Production (score 3 with high usage) — these are your lowest-hanging ROI fruit
-- Quantify Experimental waste — how many duplicates? How many abandoned?
+- Identify Functional GPTs close to Production (score 3 with high usage): these are your lowest-hanging ROI fruit
+- Quantify Experimental waste: how many duplicates? How many abandoned?
 
 ## Beyond Static Classification
 
@@ -162,7 +162,7 @@ The maturity model becomes powerful when tracked over time:
 
 **Builder Trajectories:** Which builders are consistently creating Production-grade GPTs? These are your AI champions. Which are stuck at Experimental? They need targeted support.
 
-**Department Patterns:** Is Engineering at 30% Production while Marketing is at 5%? That's not a failure — it's a data point for where to invest L&D resources.
+**Department Patterns:** Is Engineering at 30% Production while Marketing is at 5%? That's not a failure: it's a data point for where to invest L&D resources.
 
 **Training Impact:** Did the prompt engineering workshop actually move the needle? Compare maturity distributions before and after for workshop participants.
 
@@ -172,11 +172,11 @@ The maturity model becomes powerful when tracked over time:
 
 AgentsOrg implements the GPT Portfolio Maturity Model automatically:
 
-1. **Discovery** — Connects to OpenAI's Compliance API to fetch your full GPT inventory
-2. **Enrichment** — Runs 9 semantic KPI analyses per GPT, including Sophistication Score
-3. **Classification** — Maps each GPT to Experimental, Functional, or Production
-4. **Visualization** — The Leader Dashboard shows maturity distribution with drill-down to individual GPTs
-5. **Action** — Builder Recognition identifies your champions; L&D recommends specific courses for each builder based on actual gaps
+1. **Discovery**: Connects to OpenAI's Compliance API to fetch your full GPT inventory
+2. **Enrichment**: Runs 9 semantic KPI analyses per GPT, including Sophistication Score
+3. **Classification**: Maps each GPT to Experimental, Functional, or Production
+4. **Visualization**: The Leader Dashboard shows maturity distribution with drill-down to individual GPTs
+5. **Action**: Builder Recognition identifies your champions; L&D recommends specific courses for each builder based on actual gaps
 
 Deploy in minutes. Demo mode included for evaluation:
 
@@ -187,4 +187,4 @@ cd agentsorg && make up
 
 ---
 
-*The GPT Portfolio Maturity Model is part of [AI Transformation Intelligence](/blog/ai-transformation-intelligence) — a discipline we're defining in the open. [Contribute](https://github.com/ori129/agentsorg/blob/main/CONTRIBUTING.md) to the framework or [discuss](https://github.com/ori129/agentsorg/discussions) your organization's experience.*
+*The GPT Portfolio Maturity Model is part of [AI Transformation Intelligence](/blog/ai-transformation-intelligence): a discipline we're defining in the open. [Contribute](https://github.com/ori129/agentsorg/blob/main/CONTRIBUTING.md) to the framework or [discuss](https://github.com/ori129/agentsorg/discussions) your organization's experience.*

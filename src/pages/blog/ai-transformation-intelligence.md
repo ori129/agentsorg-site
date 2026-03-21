@@ -10,7 +10,7 @@ keywords: ["AI Transformation Intelligence", "enterprise ChatGPT", "GPT governan
 
 Every enterprise that adopted ChatGPT Enterprise hit the same inflection point: creation outpaced governance.
 
-Within months, hundreds of Custom GPTs appeared across departments. Marketing built content generators. Sales built proposal writers. Legal built contract reviewers. Engineering built code assistants. And no one — not the CIO, not the AI leader, not the compliance team — had a clear picture of what existed, what was working, or what was risky.
+Within months, hundreds of Custom GPTs appeared across departments. Marketing built content generators. Sales built proposal writers. Legal built contract reviewers. Engineering built code assistants. And no one: not the CIO, not the AI leader, not the compliance team: had a clear picture of what existed, what was working, or what was risky.
 
 **AI Transformation Intelligence** is the discipline of answering those questions systematically.
 
@@ -19,7 +19,7 @@ Within months, hundreds of Custom GPTs appeared across departments. Marketing bu
 AI Transformation Intelligence (ATI) is the practice of using data, semantic analysis, and automation to:
 
 1. **Discover** every AI asset (Custom GPTs, assistants, agents) across an organization
-2. **Assess** each asset on multiple dimensions — risk, quality, sophistication, ROI potential, adoption friction
+2. **Assess** each asset on multiple dimensions: risk, quality, sophistication, ROI potential, adoption friction
 3. **Govern** the portfolio with automated risk flagging, duplicate detection, and compliance scoring
 4. **Optimize** through builder recognition, targeted learning recommendations, and maturity tracking
 
@@ -31,13 +31,13 @@ Three converging trends make ATI essential:
 
 ### 1. The Custom GPT Explosion
 
-OpenAI's ChatGPT Enterprise launched in mid-2023. By early 2026, large enterprises report anywhere from 200 to 5,000+ Custom GPTs in their workspaces. Most were built by individual contributors — not IT, not engineering, not the AI team. This is **shadow AI** at scale.
+OpenAI's ChatGPT Enterprise launched in mid-2023. By early 2026, large enterprises report anywhere from 200 to 5,000+ Custom GPTs in their workspaces. Most were built by individual contributors: not IT, not engineering, not the AI team. This is **shadow AI** at scale.
 
 ### 2. The Governance Gap
 
 OpenAI's admin console shows you a list of GPTs. That's it. No risk scores. No quality metrics. No duplicate detection. No way to understand which GPTs handle sensitive data, which duplicate existing ones, or which deliver actual business value.
 
-Enterprise IT has decades of experience governing software procurement, SaaS sprawl, and API access. But governing AI creation requires a fundamentally different approach — one that understands the *semantics* of what an AI agent does, not just its metadata.
+Enterprise IT has decades of experience governing software procurement, SaaS sprawl, and API access. But governing AI creation requires a fundamentally different approach: one that understands the *semantics* of what an AI agent does, not just its metadata.
 
 ### 3. The ROI Question
 
@@ -45,7 +45,7 @@ The CFO wants to know: is our ChatGPT Enterprise subscription delivering value? 
 
 ## The 9 Dimensions of GPT Intelligence
 
-At the core of AI Transformation Intelligence is **semantic enrichment** — using LLMs to analyze each GPT's system prompt, configuration, and capabilities to produce structured intelligence.
+At the core of AI Transformation Intelligence is **semantic enrichment**: using LLMs to analyze each GPT's system prompt, configuration, and capabilities to produce structured intelligence.
 
 AgentsOrg defines 9 semantic KPIs that capture the full picture of each Custom GPT:
 
@@ -71,17 +71,17 @@ One of the most valuable frameworks within ATI is the **GPT Portfolio Maturity M
 - **Functional** (Sophistication 3): Useful and actively used, with structured prompts and some tooling. Delivering value but with room to improve.
 - **Experimental** (Sophistication 1-2): Minimal instructions, no tools, no integrations. Either early-stage explorations or abandoned experiments.
 
-The typical enterprise distribution is stark: **~60% Experimental, ~25% Functional, ~15% Production**. This isn't a failure — it's the natural shape of organic AI adoption. But without measuring it, you can't improve it.
+The typical enterprise distribution is stark: **~60% Experimental, ~25% Functional, ~15% Production**. This isn't a failure: it's the natural shape of organic AI adoption. But without measuring it, you can't improve it.
 
-ATI helps you shift the curve. Identify your Production builders. Learn from their patterns. Upskill your Experimental builders through targeted courses. Retire abandoned GPTs. The goal isn't to make everything Production-grade — it's to make the investment intentional.
+ATI helps you shift the curve. Identify your Production builders. Learn from their patterns. Upskill your Experimental builders through targeted courses. Retire abandoned GPTs. The goal isn't to make everything Production-grade: it's to make the investment intentional.
 
 ## From Governance to Learning
 
 Traditional IT governance stops at "identify and control." AI Transformation Intelligence goes further:
 
-**Builder Recognition** scores each GPT creator on a composite metric (quality 35%, adoption 25%, hygiene 25%, volume 15%). This surfaces your hidden AI champions — the people building production-grade GPTs that others actually use.
+**Builder Recognition** scores each GPT creator on a composite metric (quality 35%, adoption 25%, hygiene 25%, volume 15%). This surfaces your hidden AI champions: the people building production-grade GPTs that others actually use.
 
-**Targeted Learning** maps each builder's actual KPI gaps to specific courses. If a builder creates GPTs with high sophistication but poor prompting quality, they get prompt engineering courses — not generic AI training.
+**Targeted Learning** maps each builder's actual KPI gaps to specific courses. If a builder creates GPTs with high sophistication but poor prompting quality, they get prompt engineering courses: not generic AI training.
 
 **Workshop Impact Correlation** measures whether in-person training actually improved GPT quality by comparing before/after scores for participants.
 
@@ -108,7 +108,7 @@ git clone https://github.com/ori129/agentsorg.git
 cd agentsorg && make up
 ```
 
-Enable Demo mode to explore with realistic data — no API keys required.
+Enable Demo mode to explore with realistic data: no API keys required.
 
 If you're a consultant helping enterprises navigate AI transformation, check out our [Advisor Directory](/advisors) to learn how AgentsOrg can become your assessment toolkit.
 

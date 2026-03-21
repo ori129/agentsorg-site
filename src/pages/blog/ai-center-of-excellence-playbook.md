@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: "The AI Center of Excellence Playbook for ChatGPT Enterprise"
-description: "How to build an AI Center of Excellence that actually scales AI capability across the enterprise — with the org structure, governance model, and measurement framework that works for ChatGPT Enterprise deployments."
+description: "How to build an AI Center of Excellence that actually scales AI capability across the enterprise: with the org structure, governance model, and measurement framework that works for ChatGPT Enterprise deployments."
 date: "2026-03-17"
 author: "AgentsOrg Team"
 readingTime: 11
@@ -14,7 +14,7 @@ In the first year, the AI team does everything: runs the ChatGPT Enterprise depl
 
 Then the program grows. GPT creation velocity accelerates. Business units start making their own decisions. Governance requests pile up. The central AI team can't keep pace. The program either stagnates under centralized control or fragments under decentralized chaos.
 
-The organizations that escape this trap build an AI Center of Excellence (CoE) — a governance and enablement structure that scales AI capability without scaling the central team linearly. Here's how to do it for a ChatGPT Enterprise environment.
+The organizations that escape this trap build an AI Center of Excellence (CoE): a governance and enablement structure that scales AI capability without scaling the central team linearly. Here's how to do it for a ChatGPT Enterprise environment.
 
 ## What an AI CoE Actually Is (and Isn't)
 
@@ -30,7 +30,7 @@ An AI CoE is:
 - A **measurement system** that tracks AI capability maturity organization-wide
 - An **enablement engine** that continuously improves builder quality
 
-The distinction matters because the wrong model — the "central team builds it all" model — creates a bottleneck. The right model creates a multiplier.
+The distinction matters because the wrong model: the "central team builds it all" model: creates a bottleneck. The right model creates a multiplier.
 
 ## The Three-Layer CoE Structure
 
@@ -38,7 +38,7 @@ Effective AI CoEs for ChatGPT Enterprise environments typically operate in three
 
 ### Layer 1: The Core AI Team (3-8 people)
 
-This is the central team that owns the program. Their job is not to build GPTs for business units — it's to build the infrastructure that lets business units build well.
+This is the central team that owns the program. Their job is not to build GPTs for business units: it's to build the infrastructure that lets business units build well.
 
 **Core AI Team responsibilities:**
 - Own the ChatGPT Enterprise deployment and admin configuration
@@ -56,7 +56,7 @@ This is the central team that owns the program. Their job is not to build GPTs f
 
 ### Layer 2: AI Champions (10-50 people, depending on org size)
 
-AI Champions are high-performing GPT builders embedded in business units who serve as the CoE's distributed presence. They are not full-time AI roles — they're existing employees who've demonstrated strong AI capability and are formally recognized and supported by the CoE.
+AI Champions are high-performing GPT builders embedded in business units who serve as the CoE's distributed presence. They are not full-time AI roles: they're existing employees who've demonstrated strong AI capability and are formally recognized and supported by the CoE.
 
 **AI Champion responsibilities:**
 - Serve as the first point of contact for AI questions in their business unit
@@ -65,9 +65,9 @@ AI Champions are high-performing GPT builders embedded in business units who ser
 - Participate in monthly AI Champion community of practice calls
 - Mentor new builders in their unit
 
-**How Champions are identified:** This is where AI Transformation Intelligence becomes critical. Champions shouldn't be self-nominated or manager-nominated — they should be data-nominated. The Builder Score (a composite of GPT quality, adoption, governance hygiene, and volume) surfaces the employees who are already building the best AI, regardless of title or department.
+**How Champions are identified:** This is where AI Transformation Intelligence becomes critical. Champions shouldn't be self-nominated or manager-nominated: they should be data-nominated. The Builder Score (a composite of GPT quality, adoption, governance hygiene, and volume) surfaces the employees who are already building the best AI, regardless of title or department.
 
-Formalizing these naturally-occurring champions into a CoE structure gives them recognition, community, and influence — and gives the CoE distributed reach without headcount.
+Formalizing these naturally-occurring champions into a CoE structure gives them recognition, community, and influence: and gives the CoE distributed reach without headcount.
 
 **What Champions get:**
 - Formal recognition as an organizational AI expert
@@ -78,7 +78,7 @@ Formalizing these naturally-occurring champions into a CoE structure gives them 
 
 ### Layer 3: All Builders (everyone with GPT creation access)
 
-The third layer is the entire population of employees who can create Custom GPTs. This isn't a defined team — it's the universe of potential GPT builders.
+The third layer is the entire population of employees who can create Custom GPTs. This isn't a defined team: it's the universe of potential GPT builders.
 
 The CoE's job with this layer is to:
 - Make good building easier than bad building (quality templates, starter prompts)
@@ -98,7 +98,7 @@ One of the most valuable things a CoE can establish is a tiered governance model
 
 **Process:** Auto-approved on creation with standard notice of terms.
 
-**Example:** "Help me write better meeting agendas" — a personal productivity assistant for one person.
+**Example:** "Help me write better meeting agendas": a personal productivity assistant for one person.
 
 ### Tier 1: AI Champion Review (Standard)
 
@@ -128,7 +128,7 @@ This tiered model is only sustainable if it's automated at the classification st
 
 ## The Metrics Cadence
 
-An AI CoE without a measurement cadence is just a governance committee. Metrics make the CoE accountable to outcomes — and make AI transformation legible to leadership.
+An AI CoE without a measurement cadence is just a governance committee. Metrics make the CoE accountable to outcomes: and make AI transformation legible to leadership.
 
 **Weekly (AI Team internal):**
 - New GPTs created and their initial risk classification
@@ -160,9 +160,9 @@ An AI CoE without a measurement cadence is just a governance committee. Metrics 
 
 **Failure Mode 2: Champions are chosen for seniority, not capability.** If your AI Champions are department heads who volunteered rather than proven builders who were identified by data, you have a political committee, not a capability network.
 
-**Failure Mode 3: The CoE owns the roadmap but not the intelligence.** A CoE that makes decisions without portfolio intelligence — without knowing what exists, who built it, how it's performing — is governing in the dark. AI Transformation Intelligence is the nervous system of the CoE.
+**Failure Mode 3: The CoE owns the roadmap but not the intelligence.** A CoE that makes decisions without portfolio intelligence: without knowing what exists, who built it, how it's performing: is governing in the dark. AI Transformation Intelligence is the nervous system of the CoE.
 
-**Failure Mode 4: Training is event-based, not continuous.** A two-day AI bootcamp produces a two-day bump in builder quality. Continuous, targeted learning — matched to each builder's actual skill gaps as measured in their GPT output — produces compounding improvement.
+**Failure Mode 4: Training is event-based, not continuous.** A two-day AI bootcamp produces a two-day bump in builder quality. Continuous, targeted learning: matched to each builder's actual skill gaps as measured in their GPT output: produces compounding improvement.
 
 **Failure Mode 5: No executive mandate.** An AI CoE without executive sponsorship gets ignored when it conflicts with business unit priorities. The CoE needs a named executive sponsor who can enforce governance standards when needed.
 
@@ -186,7 +186,7 @@ By day 60, you have a functioning CoE structure, a governed portfolio baseline, 
 
 ---
 
-AgentsOrg is built to support exactly this operating model — providing the portfolio intelligence, Builder Scores, risk classification, and metrics dashboard that make an AI CoE functional rather than theoretical.
+AgentsOrg is built to support exactly this operating model: providing the portfolio intelligence, Builder Scores, risk classification, and metrics dashboard that make an AI CoE functional rather than theoretical.
 
 ```bash
 git clone https://github.com/ori129/agentsorg.git
@@ -195,4 +195,4 @@ cd agentsorg && make up
 
 ---
 
-*Building an AI CoE and running into a challenge this playbook doesn't cover? Post in [GitHub Discussions](https://github.com/ori129/agentsorg/discussions) — we're compiling community learnings into future versions of this guide.*
+*Building an AI CoE and running into a challenge this playbook doesn't cover? Post in [GitHub Discussions](https://github.com/ori129/agentsorg/discussions): we're compiling community learnings into future versions of this guide.*

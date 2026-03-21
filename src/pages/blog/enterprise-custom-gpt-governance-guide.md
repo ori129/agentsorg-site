@@ -10,7 +10,7 @@ keywords: ["enterprise GPT governance", "Custom GPT management", "ChatGPT Enterp
 
 You gave 10,000 employees access to ChatGPT Enterprise. Six months later, there are 800 Custom GPTs in your workspace. How do you govern something you can't see?
 
-This guide lays out a practical, scalable governance program for enterprise Custom GPTs — from initial discovery through ongoing optimization. Whether you're an AI Transformation Leader, a Chief AI Officer, or a governance team building the program from scratch, this is the playbook.
+This guide lays out a practical, scalable governance program for enterprise Custom GPTs: from initial discovery through ongoing optimization. Whether you're an AI Transformation Leader, a Chief AI Officer, or a governance team building the program from scratch, this is the playbook.
 
 ## The Governance Problem
 
@@ -28,11 +28,11 @@ Traditional governance tools (GRC platforms, CMDB, SaaS management) can't parse 
 
 ## The Five Pillars of GPT Governance
 
-### Pillar 1: Discovery — Know What You Have
+### Pillar 1: Discovery: Know What You Have
 
 **The problem:** You can't govern what you can't see.
 
-**The approach:** Automated, continuous discovery of every Custom GPT in your workspace through OpenAI's Compliance API. Not a one-time audit — a live, always-current inventory.
+**The approach:** Automated, continuous discovery of every Custom GPT in your workspace through OpenAI's Compliance API. Not a one-time audit: a live, always-current inventory.
 
 **What discovery should capture:**
 - GPT name, description, and creator
@@ -45,27 +45,27 @@ Traditional governance tools (GRC platforms, CMDB, SaaS management) can't parse 
 
 **Implementation:** AgentsOrg connects to the Compliance API and fetches your complete GPT inventory automatically. Run it once or schedule recurring scans.
 
-### Pillar 2: Assessment — Understand What It Does
+### Pillar 2: Assessment: Understand What It Does
 
 **The problem:** A GPT named "Sales Helper" could be a harmless FAQ bot or a tool that processes customer PII through external APIs. The name tells you nothing.
 
-**The approach:** Semantic enrichment — using LLMs to analyze each GPT's system prompt and configuration to produce structured intelligence.
+**The approach:** Semantic enrichment: using LLMs to analyze each GPT's system prompt and configuration to produce structured intelligence.
 
 **The 9 KPIs every GPT should be assessed on:**
 
-1. **Business Process** — What workflow does this automate? (content creation, data analysis, customer communication, etc.)
-2. **Risk Level** — What's the exposure? (data handling, external integrations, compliance sensitivity)
-3. **Risk Flags** — Specific concerns (PII processing, financial data, regulatory scope, unvetted API calls)
-4. **Sophistication** — How mature is this GPT's implementation? (1-5 score)
-5. **Prompting Quality** — How well-crafted are the instructions? (1-5 score)
-6. **ROI Potential** — What's the estimated business value? (based on process criticality and usage)
-7. **Intended Audience** — Who is this built for? (individual, team, department, org-wide)
-8. **Integration Flags** — What external systems does it connect to?
-9. **Output Type** — What does it produce? (documents, analysis, code, conversation)
+1. **Business Process**: What workflow does this automate? (content creation, data analysis, customer communication, etc.)
+2. **Risk Level**: What's the exposure? (data handling, external integrations, compliance sensitivity)
+3. **Risk Flags**: Specific concerns (PII processing, financial data, regulatory scope, unvetted API calls)
+4. **Sophistication**: How mature is this GPT's implementation? (1-5 score)
+5. **Prompting Quality**: How well-crafted are the instructions? (1-5 score)
+6. **ROI Potential**: What's the estimated business value? (based on process criticality and usage)
+7. **Intended Audience**: Who is this built for? (individual, team, department, org-wide)
+8. **Integration Flags**: What external systems does it connect to?
+9. **Output Type**: What does it produce? (documents, analysis, code, conversation)
 
 This turns a list of GPTs into an **intelligence map**.
 
-### Pillar 3: Risk Management — Flag What's Dangerous
+### Pillar 3: Risk Management: Flag What's Dangerous
 
 **The problem:** Some GPTs handle sensitive data, make external API calls, or operate in regulated domains. Without semantic analysis, these look identical to harmless GPTs.
 
@@ -88,7 +88,7 @@ This turns a list of GPTs into an **intelligence map**.
 - **Medium:** Add to quarterly review cycle. Suggest improvements.
 - **Low:** Monitor. No immediate action needed.
 
-### Pillar 4: Optimization — Make the Investment Count
+### Pillar 4: Optimization: Make the Investment Count
 
 **The problem:** ChatGPT Enterprise costs significant budget. Without optimization, most of that investment supports experimental GPTs that no one uses.
 
@@ -96,21 +96,21 @@ This turns a list of GPTs into an **intelligence map**.
 
 **A. Duplicate Detection**
 
-Semantic similarity analysis (using vector embeddings) identifies GPTs that solve the same problem — even when named completely differently. "Sales Email Writer", "Outreach Composer", and "Cold Email Generator" might all be the same GPT built by three different people.
+Semantic similarity analysis (using vector embeddings) identifies GPTs that solve the same problem: even when named completely differently. "Sales Email Writer", "Outreach Composer", and "Cold Email Generator" might all be the same GPT built by three different people.
 
 What to do:
 - Identify the best implementation (highest quality score)
 - Consolidate users to the best version
 - Retire duplicates
-- Notify creators — this is a learning opportunity, not a punishment
+- Notify creators: this is a learning opportunity, not a punishment
 
 **B. Builder Recognition**
 
 Your best GPT builders are creating real business value. Identify them through composite scoring:
-- Quality Score (35% weight) — How well-built are their GPTs?
-- Adoption (25%) — Are others actually using them?
-- Hygiene (25%) — Proper descriptions, documentation, naming
-- Volume (15%) — Consistent output across multiple GPTs
+- Quality Score (35% weight): How well-built are their GPTs?
+- Adoption (25%): Are others actually using them?
+- Hygiene (25%): Proper descriptions, documentation, naming
+- Volume (15%): Consistent output across multiple GPTs
 
 Recognize these builders publicly. Make them mentors. Include them in governance conversations.
 
@@ -123,7 +123,7 @@ Generic "AI training" doesn't move the needle. Targeted learning does:
 
 AgentsOrg integrates with OpenAI Academy to recommend specific courses based on each builder's actual KPI gaps.
 
-### Pillar 5: Lifecycle Management — Govern Over Time
+### Pillar 5: Lifecycle Management: Govern Over Time
 
 **The problem:** Governance isn't a one-time audit. GPTs are created, modified, abandoned, and sometimes resurrected. Your governance program must be continuous.
 
@@ -141,7 +141,7 @@ AgentsOrg integrates with OpenAI Academy to recommend specific courses based on 
 
 ## Building the Governance Team
 
-GPT governance isn't a tool problem — it's an organizational problem. You need the right roles:
+GPT governance isn't a tool problem: it's an organizational problem. You need the right roles:
 
 **AI Transformation Leader** (owns the program)
 - Sets governance policies
@@ -163,7 +163,7 @@ GPT governance isn't a tool problem — it's an organizational problem. You need
 - Validates risk frameworks
 - Ensures regulatory compliance
 
-For most organizations, this isn't four new hires — it's allocating 20-30% of existing roles to GPT governance, supported by tooling that automates discovery, assessment, and flagging.
+For most organizations, this isn't four new hires: it's allocating 20-30% of existing roles to GPT governance, supported by tooling that automates discovery, assessment, and flagging.
 
 ## Common Mistakes
 
@@ -171,7 +171,7 @@ For most organizations, this isn't four new hires — it's allocating 20-30% of 
 Don't write governance policies until you know what you're governing. Discover and assess first. Policy follows data.
 
 **2. Treating GPT governance like software governance.**
-GPTs aren't software. They're created by business users, not developers. Your governance program must meet them where they are — with recognition and learning, not just controls.
+GPTs aren't software. They're created by business users, not developers. Your governance program must meet them where they are: with recognition and learning, not just controls.
 
 **3. Governing through restriction.**
 If your first governance action is "restrict who can create GPTs," you've failed. The goal is to enable *better* creation, not less creation. Govern through visibility, quality standards, and upskilling.
@@ -199,8 +199,8 @@ git clone https://github.com/ori129/agentsorg.git
 cd agentsorg && make up
 ```
 
-If you need help implementing governance, explore our [AI Transformation Advisors Directory](/advisors) — consultants who use AgentsOrg as their assessment toolkit.
+If you need help implementing governance, explore our [AI Transformation Advisors Directory](/advisors): consultants who use AgentsOrg as their assessment toolkit.
 
 ---
 
-*This guide is part of [AI Transformation Intelligence](/blog/ai-transformation-intelligence) — a discipline we're building in the open. Have governance questions? [Start a discussion](https://github.com/ori129/agentsorg/discussions) on GitHub.*
+*This guide is part of [AI Transformation Intelligence](/blog/ai-transformation-intelligence): a discipline we're building in the open. Have governance questions? [Start a discussion](https://github.com/ori129/agentsorg/discussions) on GitHub.*
