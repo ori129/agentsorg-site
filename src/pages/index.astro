@@ -129,7 +129,6 @@ const faqs = [
           { id: 'quality',      label: 'Quality Scores' },
           { id: 'recognition',  label: 'Recognition' },
           { id: 'learning',     label: 'Learning' },
-          { id: 'workshops',    label: 'Workshops' },
         ].map((tab, i) => (
           <button
             data-tab={tab.id}
@@ -143,17 +142,16 @@ const faqs = [
       <!-- Screenshot panels -->
       <div class="relative rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/40">
         {[
-          { id: 'overview',    src: '/ss_overview.png',             alt: 'AI Portfolio Overview: KPIs, risk flags, creation velocity, department and process breakdown',    caption: '500 GPTs. Instant portfolio view.' },
-          { id: 'maturity',    src: '/ss_overview_maturity.png',   alt: 'Portfolio Maturity: GPTs classified as Production, Functional, or Experimental with quality scores', caption: 'Know exactly which GPTs are production-grade and which need work.' },
-          { id: 'builders',    src: '/ss_overview_builders.png',   alt: 'Builders view: every GPT creator ranked by quality, adoption, hygiene, and volume',                 caption: 'See every builder in your org ranked by AI output quality.' },
-          { id: 'departments', src: '/ss_overview_departments.png',alt: 'Departments view: AI adoption and asset count broken down by department',                          caption: 'Understand AI adoption across every team.' },
-          { id: 'employee',    src: '/ss_employee.png',            alt: 'Employee Portal: browse GPTs and Projects by category, search by role or need',                    caption: 'Every GPT, discoverable by anyone. Fewer duplicate builds.' },
-          { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel: GPTs flagged by severity, data exposure, compliance gaps',                             caption: '50 high-risk GPTs flagged automatically.' },
-          { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection: semantic clustering identifies redundant GPT builds',                         caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
-          { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores: per-GPT sophistication, prompting quality, ROI potential',                         caption: 'See the gap between your best and weakest builders.' },
-          { id: 'recognition', src: '/ss_recognition.png', alt: 'Builder Recognition: composite scores across quality, adoption, hygiene, volume',                  caption: 'Know who your best AI builders are. Recognize them.' },
-          { id: 'learning',    src: '/ss_learning.png',    alt: 'Learning: LLM-powered OpenAI Academy course recommendations per builder',                          caption: 'Targeted training based on each builder\'s actual gaps.' },
-          { id: 'workshops',   src: '/ss_workshops.png',   alt: 'Workshops: track L&D events and measure GPT quality impact over time',                             caption: 'Track training ROI. Before vs. after GPT quality scores.' },
+          { id: 'overview',    src: '/ss_overview.png',              alt: 'AI Portfolio Overview: 2012 GPTs, 202 risk flags, creation velocity, departments and processes', caption: '2,012 GPTs. Instant portfolio view.' },
+          { id: 'maturity',    src: '/ss_overview_maturity.png',   alt: 'Portfolio Maturity: GPTs classified as Production, Functional, or Experimental with quality scores',  caption: 'Know exactly which GPTs are production-grade and which need work.' },
+          { id: 'builders',    src: '/ss_overview_builders.png',   alt: 'Builders view: every GPT creator ranked by quality, adoption, hygiene, and volume',                  caption: 'Every builder in your org ranked by AI output quality.' },
+          { id: 'departments', src: '/ss_overview_departments.png',alt: 'Departments view: AI adoption and GPT count broken down by team',                                    caption: 'Understand AI adoption across every team.' },
+          { id: 'employee',    src: '/ss_employee.png',            alt: 'Employee Portal: browse GPTs by category, search by role or need',                                   caption: 'Every GPT, discoverable by anyone. Fewer duplicate builds.' },
+          { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel: GPTs flagged by severity, data exposure, compliance gaps',                              caption: '202 high-risk GPTs flagged automatically.' },
+          { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection: semantic clustering identifies redundant GPT builds',                          caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
+          { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores: per-GPT sophistication, prompting quality, ROI potential',                          caption: 'See the gap between your best and weakest builders.' },
+          { id: 'recognition', src: '/ss_recognition.png', alt: 'Builder Recognition: composite scores across quality, adoption, hygiene, volume',                   caption: 'Know who your best AI builders are. Recognize them.' },
+          { id: 'learning',    src: '/ss_learning.png',    alt: 'Learning: LLM-powered course recommendations per builder based on actual skill gaps',                caption: 'Targeted training based on each builder\'s actual gaps.' },
         ].map((panel, i) => (
           <div data-panel={panel.id} class={`ss-panel ${i !== 0 ? 'hidden' : ''}`}>
             <img
