@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Is this production-ready?',
-    a: 'Yes. Custom GPT and Project governance (discovery, risk flagging, duplicate detection, builder scoring, and L&D recommendations) is fully built and running in production today. Demo mode lets you explore everything without an API key.',
+    a: 'Yes. Custom GPT and Project governance (discovery, risk flagging, standardization opportunity detection, builder scoring, and L&D recommendations) is fully built and running in production today. Demo mode lets you explore everything without an API key.',
   },
   {
     q: 'How is this different from the OpenAI admin console?',
@@ -34,14 +34,14 @@ const faqs = [
   },
   {
     q: 'What\'s the ROI? How do I justify this to my CFO?',
-    a: 'Three concrete numbers: (1) Duplicate removal: every redundant GPT represents 20-40 hours of build time wasted. Find 9 clusters, recover 160+ hours. (2) Risk prevention: one ungoverned GPT exposing sensitive data costs far more than the tool. (3) Training prioritization: L&D spend goes to builders who actually need it, not a blanket rollout.',
+    a: 'Three concrete levers: (1) Standardization of validated demand: when 6 teams independently build the same meeting-summary GPT, that is not just wasted effort — it is proof a shared, certified solution should exist. One org standard replaces six fragmented rebuilds. (2) Risk prevention: one ungoverned GPT exposing sensitive data costs far more than the tool. Catching it early is the cheapest governance win available. (3) Targeted enablement: L&D spend goes to builders who actually need it, measured by real skill gaps in their GPT output — not a blanket course rollout.',
   },
 ];
 ---
 
 <Base
   title="AgentsOrg | Finally know what your team is building with ChatGPT"
-  description="See every GPT and Project your team has built. Flag what's risky. Stop duplicates. Prove ROI. Open-source governance for ChatGPT Enterprise."
+  description="The system of record for enterprise AI adoption in ChatGPT. Inventory every GPT and Project. Detect standardization opportunities. Identify your best AI builders. Open-source governance for ChatGPT Enterprise."
 >
 
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
@@ -61,7 +61,7 @@ const faqs = [
       </h1>
 
       <p class="text-lg md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 animate-fade-in animate-delay-2 leading-relaxed">
-        See every GPT and Project across your org. Flag what's risky. Eliminate duplicates. Identify your best AI builders. Prove ROI before your next renewal.
+        The system of record for enterprise AI adoption in ChatGPT. Inventory what exists. Surface what's risky. Detect where demand is concentrating. Know who your strongest builders are. Turn repeated effort into certified, shared standards.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-3">
@@ -125,7 +125,7 @@ const faqs = [
           { id: 'departments',  label: 'Departments' },
           { id: 'employee',     label: 'Employee Portal' },
           { id: 'risk',         label: 'Risk Panel' },
-          { id: 'duplicates',   label: 'Duplicates' },
+          { id: 'standardization', label: 'Standardization' },
           { id: 'quality',      label: 'Quality Scores' },
           { id: 'recognition',  label: 'Recognition' },
           { id: 'learning',     label: 'Learning' },
@@ -146,9 +146,9 @@ const faqs = [
           { id: 'maturity',    src: '/ss_overview_maturity.png',   alt: 'Portfolio Maturity: GPTs classified as Production, Functional, or Experimental with quality scores',  caption: 'Know exactly which GPTs are production-grade and which need work.' },
           { id: 'builders',    src: '/ss_overview_builders.png',   alt: 'Builders view: every GPT creator ranked by quality, adoption, hygiene, and volume',                  caption: 'Every builder in your org ranked by AI output quality.' },
           { id: 'departments', src: '/ss_overview_departments.png',alt: 'Departments view: AI adoption and GPT count broken down by team',                                    caption: 'Understand AI adoption across every team.' },
-          { id: 'employee',    src: '/ss_employee.png',            alt: 'Employee Portal: browse GPTs by category, search by role or need',                                   caption: 'Every GPT, discoverable by anyone. Fewer duplicate builds.' },
+          { id: 'employee',    src: '/ss_employee.png',            alt: 'Employee Portal: browse GPTs by category, search by role or need',                                   caption: 'Every GPT, discoverable by anyone. Check what exists before you build.' },
           { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel: GPTs flagged by severity, data exposure, compliance gaps',                              caption: '202 high-risk GPTs flagged automatically.' },
-          { id: 'duplicates',  src: '/ss_duplicates.png',  alt: 'Duplicate Detection: semantic clustering identifies redundant GPT builds',                          caption: '9 clusters found. ~160 hours wasted on rebuilds.' },
+          { id: 'standardization', src: '/ss_standardization.png', alt: 'Standardization Opportunities: semantic clustering identifies demand clusters and shared solution candidates', caption: '9 demand clusters detected. Each one a candidate for a certified org standard.' },
           { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores: per-GPT sophistication, prompting quality, ROI potential',                          caption: 'See the gap between your best and weakest builders.' },
           { id: 'recognition', src: '/ss_recognition.png', alt: 'Builder Recognition: composite scores across quality, adoption, hygiene, volume',                   caption: 'Know who your best AI builders are. Recognize them.' },
           { id: 'learning',    src: '/ss_learning.png',    alt: 'Learning: LLM-powered course recommendations per builder based on actual skill gaps',                caption: 'Targeted training based on each builder\'s actual gaps.' },
@@ -252,7 +252,7 @@ const faqs = [
             {[
               { name: 'Overview', color: 'accent', desc: 'Portfolio KPIs, creation velocity, drill-downs by builder, department, maturity, business process, output type.' },
               { name: 'Risk Panel', color: 'red', desc: 'Every GPT flagged by severity. Data exposure, compliance gaps, ungoverned builds, surfaced automatically.' },
-              { name: 'Duplicates', color: 'violet', desc: 'Finds duplicate GPTs automatically, even with different names. See exactly how many rebuild hours were wasted.' },
+              { name: 'Standardization Opportunities', color: 'violet', desc: 'Detects when multiple teams independently build GPTs for the same workflow — a strong signal that a shared, certified solution should exist.' },
               { name: 'Quality Scores', color: 'amber', desc: 'Prompting quality distribution across the portfolio. See the gap between your best and weakest builders.' },
             ].map(item => (
               <div class={`p-5 rounded-xl border border-border bg-surface hover:border-${item.color}/30 transition-colors`}>
@@ -282,7 +282,7 @@ const faqs = [
             <span class="text-text-dim text-sm">For the whole org</span>
           </div>
           <p class="text-text-muted text-sm leading-relaxed">
-            Read-only GPT and Project discovery for every employee. Find what already exists before building another duplicate.
+            Read-only GPT and Project discovery for every employee. Check if a certified solution already exists for your workflow before you build.
           </p>
         </div>
 
@@ -294,6 +294,50 @@ const faqs = [
               <span class="px-2.5 py-1 rounded-full text-xs border border-border bg-surface text-text-muted">{kpi}</span>
             ))}
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHO THIS IS FOR ──────────────────────────────────────── -->
+  <section class="py-14 md:py-20 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for a specific context</h2>
+        <p class="text-text-muted text-lg max-w-xl mx-auto">AgentsOrg is purpose-built for one environment. That focus is a feature.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 sm:p-8 rounded-2xl border border-green/30 bg-green/5">
+          <div class="text-green text-xs font-semibold uppercase tracking-wider mb-4">Built for</div>
+          <ul class="space-y-3">
+            {[
+              'CIOs and AI transformation leads managing ChatGPT Enterprise',
+              'AI Center of Excellence teams needing portfolio visibility',
+              'Platform owners responsible for AI governance and risk',
+              'Digital transformation leaders building the internal AI standard',
+            ].map(item => (
+              <li class="flex items-start gap-2.5 text-sm text-text-muted">
+                <svg class="w-4 h-4 text-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="p-6 sm:p-8 rounded-2xl border border-border bg-surface">
+          <div class="text-text-dim text-xs font-semibold uppercase tracking-wider mb-4">Not built for</div>
+          <ul class="space-y-3">
+            {[
+              'OpenAI API developers building custom AI applications',
+              'Individual ChatGPT users or non-Enterprise plans',
+              'Agent builders looking for a no-code automation tool',
+              'Cross-runtime control planes (Claude, Gemini, etc.) — ChatGPT Enterprise is the wedge',
+            ].map(item => (
+              <li class="flex items-start gap-2.5 text-sm text-text-muted">
+                <svg class="w-4 h-4 text-text-dim mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -318,12 +362,12 @@ const faqs = [
           {
             num: '02',
             title: 'Try demo mode first',
-            desc: 'No API key needed. Switch on Demo mode to explore the full platform: risk panel, duplicates, quality scores, builder recognition, with realistic sample data. Connect your real workspace when you\'re ready.',
+            desc: 'No API key needed. Switch on Demo mode to explore the full platform: risk panel, standardization opportunities, quality scores, builder recognition, with realistic sample data. Connect your real workspace when you\'re ready.',
           },
           {
             num: '03',
             title: 'Run the pipeline',
-            desc: 'Fetch → Classify → Enrich → Embed → Store. Every GPT scored across 9 dimensions. Duplicates clustered. Risk flagged. Progress shown live.',
+            desc: 'Fetch → Classify → Enrich → Embed → Store. Every GPT scored across 9 dimensions. Demand clusters detected. Risk flagged. Progress shown live.',
           },
           {
             num: '04',
@@ -369,7 +413,7 @@ const faqs = [
             {[
               'Full GPT & Project portfolio discovery',
               'Risk flagging & compliance scoring',
-              'Automatic duplicate detection',
+              'Standardization opportunity detection',
               'Quality scores across 9 dimensions',
               'Builder recognition & scoring',
               'AI-powered L&D recommendations',
@@ -439,28 +483,6 @@ const faqs = [
     </div>
   </section>
 
-  <!-- ─── ADVISORS CTA ──────────────────────────────────────────── -->
-  <section class="py-14 md:py-24 px-4 sm:px-6">
-    <div class="max-w-4xl mx-auto">
-      <div class="p-7 sm:p-12 rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/5 via-surface to-accent-2/5 relative overflow-hidden text-center">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 relative">AI Transformation Advisors</h2>
-        <p class="text-text-muted text-base sm:text-lg mb-6 sm:mb-8 max-w-xl mx-auto relative leading-relaxed">
-          Use AgentsOrg as your client assessment toolkit. Run a GPT & Project portfolio audit in minutes. Get listed in our directory of 50+ advisors.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
-          <a href="/advisors" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all text-sm">
-            View Advisor Directory
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <a href="/advisors#apply" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-border bg-surface text-text font-semibold hover:border-accent/50 transition-all text-sm">
-            Apply to Join
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ─── OPEN SOURCE ───────────────────────────────────────────── -->
   <section class="py-10 md:py-16 px-4 sm:px-6 bg-surface">
     <div class="max-w-5xl mx-auto">
@@ -518,6 +540,27 @@ const faqs = [
           "acceptedAnswer": { "@type": "Answer", "text": f.a }
         }))
       })} />
+    </div>
+  </section>
+
+  <!-- ─── ADVISORS CTA ──────────────────────────────────────────── -->
+  <section class="py-10 md:py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="p-7 sm:p-10 rounded-3xl border border-border bg-surface relative overflow-hidden text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 relative">AI Transformation Advisors</h2>
+        <p class="text-text-muted text-sm sm:text-base mb-6 max-w-xl mx-auto relative leading-relaxed">
+          Use AgentsOrg as your client assessment toolkit. Run a GPT &amp; Project portfolio audit in minutes. Get listed in our directory of 50+ advisors.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 relative">
+          <a href="/advisors" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all text-sm">
+            View Advisor Directory
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/advisors#apply" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl border border-border bg-bg text-text font-semibold hover:border-accent/50 transition-all text-sm">
+            Apply to Join
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
