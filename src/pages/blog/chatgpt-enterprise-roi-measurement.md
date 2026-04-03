@@ -34,7 +34,7 @@ To measure ROI accurately, you have to measure at the GPT level, not the session
 
 ### 1. Portfolio Maturity Distribution
 
-The most revealing single metric: what percentage of your Custom GPTs are Production-grade vs. Experimental?
+The most revealing single metric: what percentage of your Custom GPTs and Projects are Production-grade vs. Experimental?
 
 The Production/Functional/Experimental breakdown (described in detail in our [GPT Portfolio Maturity Model](/blog/gpt-portfolio-maturity-model)) is a proxy for whether your AI investment is converting into durable business capability.
 
@@ -44,9 +44,9 @@ The Production/Functional/Experimental breakdown (described in detail in our [GP
 
 ### 2. Duplication Rate
 
-What percentage of your Custom GPTs are functional duplicates of each other?
+What percentage of your Custom GPTs and Projects are functional duplicates of each other?
 
-In a 500-GPT portfolio, a 20% duplication rate means 100 GPTs that represent wasted creation effort and fragmented user adoption. It also means users choosing between multiple imperfect tools instead of rallying around one well-maintained one.
+In a 500-asset portfolio, a 20% duplication rate means 100 GPTs and Projects that represent wasted creation effort and fragmented user adoption. It also means users choosing between multiple imperfect tools instead of rallying around one well-maintained one.
 
 **How to measure it:** Semantic similarity clustering (using vector embeddings of system prompts) can identify near-duplicate GPTs automatically. Manual review cannot scale.
 
@@ -106,9 +106,9 @@ That's a story. It has specifics. It connects investment to outcomes. It shows i
 
 If you don't have a current measurement baseline, here's how to establish one in 90 days:
 
-**Days 1-30:** Run a full GPT portfolio audit. Classify every GPT with semantic enrichment. Get your starting Portfolio Maturity Distribution, Duplication Rate, and Builder Concentration numbers.
+**Days 1-30:** Run a full GPT and Project portfolio audit. Classify every asset with semantic enrichment. Get your starting Portfolio Maturity Distribution, Duplication Rate, and Builder Concentration numbers.
 
-**Days 31-60:** Map your GPT portfolio to your business process map. Identify your top 5 Production-grade GPTs by usage and flag them for case study development.
+**Days 31-60:** Map your GPT and Project portfolio to your business process map. Identify your top 5 Production-grade assets by usage and flag them for case study development.
 
 **Days 61-90:** Publish your baseline metrics internally. Get leadership alignment on what "good" looks like at 6 months and 12 months. Set targets for Maturity Distribution improvement and Duplication Rate reduction.
 

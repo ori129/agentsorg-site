@@ -10,7 +10,7 @@ keywords: ["AI Transformation Intelligence", "enterprise ChatGPT", "GPT governan
 
 Every enterprise that adopted ChatGPT Enterprise hit the same inflection point: creation outpaced governance.
 
-Within months, hundreds of Custom GPTs appeared across departments. Marketing built content generators. Sales built proposal writers. Legal built contract reviewers. Engineering built code assistants. And no one: not the CIO, not the AI leader, not the compliance team: had a clear picture of what existed, what was working, or what was risky.
+Within months, hundreds of Custom GPTs and Projects appeared across departments. Marketing built content generators. Sales built proposal writers. Legal built contract reviewers. Engineering built code assistants. And no one: not the CIO, not the AI leader, not the compliance team: had a clear picture of what existed, what was working, or what was risky.
 
 **AI Transformation Intelligence** is the discipline of answering those questions systematically.
 
@@ -18,7 +18,7 @@ Within months, hundreds of Custom GPTs appeared across departments. Marketing bu
 
 AI Transformation Intelligence (ATI) is the practice of using data, semantic analysis, and automation to:
 
-1. **Discover** every AI asset (Custom GPTs, assistants, agents) across an organization
+1. **Discover** every AI asset (Custom GPTs, Projects, assistants, agents) across an organization
 2. **Assess** each asset on multiple dimensions: risk, quality, sophistication, ROI potential, adoption friction
 3. **Govern** the portfolio with automated risk flagging, duplicate detection, and compliance scoring
 4. **Optimize** through builder recognition, targeted learning recommendations, and maturity tracking
@@ -31,7 +31,7 @@ Three converging trends make ATI essential:
 
 ### 1. The Custom GPT Explosion
 
-OpenAI's ChatGPT Enterprise launched in mid-2023. By early 2026, large enterprises report anywhere from 200 to 5,000+ Custom GPTs in their workspaces. Most were built by individual contributors: not IT, not engineering, not the AI team. This is **shadow AI** at scale.
+OpenAI's ChatGPT Enterprise launched in mid-2023. By early 2026, large enterprises report anywhere from 200 to 5,000+ Custom GPTs and Projects in their workspaces. Most were built by individual contributors: not IT, not engineering, not the AI team. This is **shadow AI** at scale.
 
 ### 2. The Governance Gap
 
@@ -47,7 +47,7 @@ The CFO wants to know: is our ChatGPT Enterprise subscription delivering value? 
 
 At the core of AI Transformation Intelligence is **semantic enrichment**: using LLMs to analyze each GPT's system prompt, configuration, and capabilities to produce structured intelligence.
 
-AgentsOrg defines 9 semantic KPIs that capture the full picture of each Custom GPT:
+AgentsOrg defines 9 semantic KPIs that capture the full picture of each Custom GPT and Project:
 
 | KPI | What It Captures |
 |-----|-----------------|
@@ -91,7 +91,7 @@ This is the shift from *governing AI* to *growing AI capability*.
 
 AgentsOrg is the open-source platform that implements AI Transformation Intelligence for enterprise ChatGPT customers:
 
-1. **Connects to OpenAI's Compliance API** to discover every Custom GPT
+1. **Connects to OpenAI's Compliance API** to discover every Custom GPT and Project
 2. **Runs a 6-stage pipeline** (Fetch → Filter → Classify → Enrich → Embed → Store) that processes the full portfolio
 3. **Enriches each GPT with 9 semantic KPIs** using LLM analysis
 4. **Detects duplicates** via pgvector semantic similarity clustering

@@ -8,11 +8,11 @@ readingTime: 10
 keywords: ["GPT maturity model", "Custom GPT assessment", "AI maturity", "enterprise ChatGPT", "GPT governance", "AI transformation"]
 ---
 
-Your organization has 500 Custom GPTs. How many are actually delivering business value?
+Your organization has 500 Custom GPTs and Projects. How many are actually delivering business value?
 
-If you're like most enterprises with ChatGPT Enterprise, the honest answer is: you don't know. Some GPTs were built in five minutes during a team meeting. Others represent weeks of careful prompt engineering, tool integration, and user testing. From the admin console, they all look the same.
+If you're like most enterprises with ChatGPT Enterprise, the honest answer is: you don't know. Some were built in five minutes during a team meeting. Others represent weeks of careful prompt engineering, tool integration, and user testing. From the admin console, they all look the same.
 
-The **GPT Portfolio Maturity Model** is a framework for classifying every Custom GPT in your workspace by the depth and quality of its configuration: turning an opaque list into an actionable intelligence map.
+The **GPT Portfolio Maturity Model** is a framework for classifying every Custom GPT and Project in your workspace by the depth and quality of its configuration: turning an opaque list into an actionable intelligence map.
 
 ## The Three Tiers
 
@@ -172,7 +172,7 @@ The maturity model becomes powerful when tracked over time:
 
 AgentsOrg implements the GPT Portfolio Maturity Model automatically:
 
-1. **Discovery**: Connects to OpenAI's Compliance API to fetch your full GPT inventory
+1. **Discovery**: Connects to OpenAI's Compliance API to fetch your full GPT and Project inventory
 2. **Enrichment**: Runs 9 semantic KPI analyses per GPT, including Sophistication Score
 3. **Classification**: Maps each GPT to Experimental, Functional, or Production
 4. **Visualization**: The Leader Dashboard shows maturity distribution with drill-down to individual GPTs

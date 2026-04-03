@@ -8,9 +8,9 @@ readingTime: 12
 keywords: ["enterprise GPT governance", "Custom GPT management", "ChatGPT Enterprise governance", "AI governance framework", "GPT risk assessment", "shadow AI"]
 ---
 
-You gave 10,000 employees access to ChatGPT Enterprise. Six months later, there are 800 Custom GPTs in your workspace. How do you govern something you can't see?
+You gave 10,000 employees access to ChatGPT Enterprise. Six months later, there are 800 Custom GPTs and Projects in your workspace. How do you govern something you can't see?
 
-This guide lays out a practical, scalable governance program for enterprise Custom GPTs: from initial discovery through ongoing optimization. Whether you're an AI Transformation Leader, a Chief AI Officer, or a governance team building the program from scratch, this is the playbook.
+This guide lays out a practical, scalable governance program for enterprise Custom GPTs and Projects: from initial discovery through ongoing optimization. Whether you're an AI Transformation Leader, a Chief AI Officer, or a governance team building the program from scratch, this is the playbook.
 
 ## The Governance Problem
 
@@ -32,7 +32,7 @@ Traditional governance tools (GRC platforms, CMDB, SaaS management) can't parse 
 
 **The problem:** You can't govern what you can't see.
 
-**The approach:** Automated, continuous discovery of every Custom GPT in your workspace through OpenAI's Compliance API. Not a one-time audit: a live, always-current inventory.
+**The approach:** Automated, continuous discovery of every Custom GPT and Project in your workspace through OpenAI's Compliance API. Not a one-time audit: a live, always-current inventory.
 
 **What discovery should capture:**
 - GPT name, description, and creator
@@ -41,7 +41,7 @@ Traditional governance tools (GRC platforms, CMDB, SaaS management) can't parse 
 - Creation date and last update
 - Sharing / visibility settings
 
-**Why manual inventories fail:** They're out of date the moment they're completed. New GPTs are created daily. Existing GPTs are modified without notice. Spreadsheet-based tracking creates false confidence.
+**Why manual inventories fail:** They're out of date the moment they're completed. New GPTs and Projects are created daily. Existing GPTs are modified without notice. Spreadsheet-based tracking creates false confidence.
 
 **Implementation:** AgentsOrg connects to the Compliance API and fetches your complete GPT inventory automatically. Run it once or schedule recurring scans.
 
@@ -63,7 +63,7 @@ Traditional governance tools (GRC platforms, CMDB, SaaS management) can't parse 
 8. **Integration Flags**: What external systems does it connect to?
 9. **Output Type**: What does it produce? (documents, analysis, code, conversation)
 
-This turns a list of GPTs into an **intelligence map**.
+This turns a list of GPTs and Projects into an **intelligence map**.
 
 ### Pillar 3: Risk Management: Flag What's Dangerous
 
@@ -184,7 +184,7 @@ The people building GPTs are your AI transformation army. Engage them as partner
 
 ## Implementation with AgentsOrg
 
-AgentsOrg implements all five pillars of GPT governance as an open-source, self-hosted platform:
+AgentsOrg implements all five pillars of GPT and Project governance as an open-source, self-hosted platform:
 
 - **Discovery:** Automated via OpenAI Compliance API
 - **Assessment:** 9-dimension semantic enrichment via LLM analysis

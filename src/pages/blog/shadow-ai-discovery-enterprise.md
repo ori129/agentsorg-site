@@ -10,7 +10,7 @@ keywords: ["shadow AI", "ChatGPT Enterprise governance", "AI discovery", "enterp
 
 Your AI governance program probably has a blind spot.
 
-You've documented your AI vendors. You've reviewed your ML models in production. You've audited your data pipelines. But there's an entire category of AI that your governance framework almost certainly doesn't cover: the Custom GPTs your employees built themselves, last quarter, in an afternoon, without telling anyone.
+You've documented your AI vendors. You've reviewed your ML models in production. You've audited your data pipelines. But there's an entire category of AI that your governance framework almost certainly doesn't cover: the Custom GPTs and Projects your employees built themselves, last quarter, in an afternoon, without telling anyone.
 
 This is shadow AI: and in most enterprises running ChatGPT Enterprise, it's not a fringe phenomenon. It's the majority of your AI footprint.
 
@@ -34,9 +34,9 @@ When ChatGPT Enterprise launches in an organization, the message is: "You can bu
 IT can't keep up. The GPT creation velocity in a 5,000-person enterprise routinely runs at dozens per week. No governance team can review each one in real time. So most GPTs are never reviewed at all.
 
 The result: within 12-18 months of a ChatGPT Enterprise deployment, the average enterprise has:
-- **60-70% of Custom GPTs** that were built without IT awareness
-- **15-25% of GPTs** with access to external APIs or file systems that no one audited
-- **10-20% of GPTs** that are duplicates of each other or of officially approved tools
+- **60-70% of Custom GPTs and Projects** that were built without IT awareness
+- **15-25% of GPTs and Projects** with access to external APIs or file systems that no one audited
+- **10-20% of GPTs and Projects** that are duplicates of each other or of officially approved tools
 - **Unknown percentage** that handle regulated data (PII, financial records, health information)
 
 ## The Four Shadow AI Risk Categories
@@ -144,9 +144,9 @@ The best programs do the opposite: they find these builders, recognize their wor
 
 ## Getting Started
 
-If you're running ChatGPT Enterprise or Team and you don't have a current inventory of your Custom GPTs with semantic classification and risk scores, you have a shadow AI problem.
+If you're running ChatGPT Enterprise or Team and you don't have a current inventory of your Custom GPTs and Projects with semantic classification and risk scores, you have a shadow AI problem.
 
-AgentsOrg automates the entire discovery and classification pipeline: connecting to OpenAI's Compliance API, extracting full GPT metadata, running semantic enrichment across 9 dimensions, and surfacing risk flags in a governance dashboard.
+AgentsOrg automates the entire discovery and classification pipeline: connecting to OpenAI's Compliance API, extracting full GPT and Project metadata, running semantic enrichment across 9 dimensions, and surfacing risk flags in a governance dashboard.
 
 ```bash
 git clone https://github.com/ori129/agentsorg.git

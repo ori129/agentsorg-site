@@ -12,7 +12,7 @@ Every enterprise AI program eventually hits the same scaling problem.
 
 In the first year, the AI team does everything: runs the ChatGPT Enterprise deployment, builds the showcase Custom GPTs, trains the early adopters, handles the governance questions. It works, because the scope is manageable and the enthusiasm is high.
 
-Then the program grows. GPT creation velocity accelerates. Business units start making their own decisions. Governance requests pile up. The central AI team can't keep pace. The program either stagnates under centralized control or fragments under decentralized chaos.
+Then the program grows. GPT and Project creation velocity accelerates. Business units start making their own decisions. Governance requests pile up. The central AI team can't keep pace. The program either stagnates under centralized control or fragments under decentralized chaos.
 
 The organizations that escape this trap build an AI Center of Excellence (CoE): a governance and enablement structure that scales AI capability without scaling the central team linearly. Here's how to do it for a ChatGPT Enterprise environment.
 
@@ -78,7 +78,7 @@ Formalizing these naturally-occurring champions into a CoE structure gives them 
 
 ### Layer 3: All Builders (everyone with GPT creation access)
 
-The third layer is the entire population of employees who can create Custom GPTs. This isn't a defined team: it's the universe of potential GPT builders.
+The third layer is the entire population of employees who can create Custom GPTs and Projects. This isn't a defined team: it's the universe of potential AI builders.
 
 The CoE's job with this layer is to:
 - Make good building easier than bad building (quality templates, starter prompts)
@@ -171,7 +171,7 @@ An AI CoE without a measurement cadence is just a governance committee. Metrics 
 If you're starting from scratch, here's a practical first 60 days:
 
 **Days 1-14: Baseline Assessment**
-Run a full portfolio audit. Classify every existing Custom GPT. Identify your top 10 builders by Builder Score. Document your current governance (or lack thereof). This is your starting point.
+Run a full portfolio audit. Classify every existing Custom GPT and Project. Identify your top 10 builders by Builder Score. Document your current governance (or lack thereof). This is your starting point.
 
 **Days 15-30: Framework Design**
 Define your risk tiers and approval workflows. Draft the AI Champion criteria and program structure. Get executive sponsor sign-off on the governance model.
@@ -180,7 +180,7 @@ Define your risk tiers and approval workflows. Draft the AI Champion criteria an
 Invite your data-identified top builders to the AI Champion program. Run a kickoff session. Give them their first assignment: review and classify the existing GPTs in their business unit.
 
 **Days 46-60: Public Launch**
-Communicate the CoE to the organization. Publish the governance framework, the GPT directory, and the path to approval. Open the Champion nomination process for the next cohort. Start your weekly metrics cadence.
+Communicate the CoE to the organization. Publish the governance framework, the GPT and Project directory, and the path to approval. Open the Champion nomination process for the next cohort. Start your weekly metrics cadence.
 
 By day 60, you have a functioning CoE structure, a governed portfolio baseline, an embedded champion network, and a measurement system. Everything after that is iteration.
 
