@@ -1,18 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// What the Compliance API actually exposes: the full surface
+// Coverage matrix — what the Compliance API exposes and where we are
 const apiSurface = [
-  { name: 'Custom GPTs', phase: 1, icon: '🤖' },
-  { name: 'Projects', phase: 1, icon: '📁' },
-  { name: 'Conversations', phase: 2, icon: '💬' },
-  { name: 'Users & Behavior', phase: 2, icon: '👥' },
-  { name: 'Automations', phase: 3, icon: '⚡' },
-  { name: 'Canvases', phase: 3, icon: '🎨' },
-  { name: 'Memories', phase: 3, icon: '🧠' },
-  { name: 'Recordings', phase: 3, icon: '🎙️' },
-  { name: 'Compliance Logs', phase: 2, icon: '📋' },
-  { name: 'Codex Environments', phase: 3, icon: '💻' },
+  { name: 'Custom GPTs',       phase: 1, icon: '🤖' },
+  { name: 'Projects',          phase: 1, icon: '📁' },
+  { name: 'Conversations',     phase: 1, icon: '💬' },
+  { name: 'Users & Behavior',  phase: 1, icon: '👥' },
+  { name: 'Automations',       phase: 3, icon: '⚡' },
+  { name: 'Canvases',          phase: 3, icon: '🎨' },
+  { name: 'Memories',          phase: 3, icon: '🧠' },
+  { name: 'Recordings',        phase: 3, icon: '🎙️' },
+  { name: 'Compliance Logs',   phase: 2, icon: '📋' },
+  { name: 'Codex Environments',phase: 3, icon: '💻' },
 ];
 
 const faqs = [
@@ -26,22 +26,22 @@ const faqs = [
   },
   {
     q: 'Is this production-ready?',
-    a: 'Yes. Custom GPT and Project governance (discovery, risk flagging, standardization opportunity detection, builder scoring, and L&D recommendations) is fully built and running in production today. Demo mode lets you explore everything without an API key.',
+    a: 'Yes. The full platform is live today: Custom GPT & Project portfolio discovery, risk flagging, standardization opportunity detection, quality and adoption scoring, builder recognition, L&D recommendations, conversation intelligence (ghost asset detection, per-user adoption insights, knowledge gap signals), workflow coverage analysis, and LLM-generated priority actions with a board-ready executive summary. Demo mode lets you explore everything without an API key.',
   },
   {
     q: 'How is this different from the OpenAI admin console?',
-    a: 'The admin console is for managing users. AgentsOrg is for understanding what all those users are building, and whether it\'s safe, redundant, or worth the investment. Different purpose entirely.',
+    a: 'The admin console is for managing users. AgentsOrg is for understanding what all those users are building — whether it\'s safe, redundant, worth the investment, and where AI demand is concentrating across the org. Different purpose entirely.',
   },
   {
     q: 'What\'s the ROI? How do I justify this to my CFO?',
-    a: 'Three concrete levers: (1) Standardization of validated demand: when 6 teams independently build the same meeting-summary GPT, that is not just wasted effort — it is proof a shared, certified solution should exist. One org standard replaces six fragmented rebuilds. (2) Risk prevention: one ungoverned GPT exposing sensitive data costs far more than the tool. Catching it early is the cheapest governance win available. (3) Targeted enablement: L&D spend goes to builders who actually need it, measured by real skill gaps in their GPT output — not a blanket course rollout.',
+    a: 'Three concrete levers: (1) Standardization of validated demand: when 6 teams independently build the same meeting-summary GPT, that is proof a shared certified solution should exist. One org standard replaces six fragmented rebuilds. (2) Risk prevention: one ungoverned GPT exposing sensitive data costs far more than the tool. Catching it early is the cheapest governance win available. (3) Targeted enablement: L&D spend goes to builders who actually need it, grounded in real skill gaps in their GPT output — not a blanket course rollout.',
   },
 ];
 ---
 
 <Base
   title="AgentsOrg | Finally know what your team is building with ChatGPT"
-  description="The system of record for enterprise AI adoption in ChatGPT. Inventory every GPT and Project. Detect standardization opportunities. Identify your best AI builders. Open-source governance for ChatGPT Enterprise."
+  description="The open-source governance platform for ChatGPT Enterprise. Score every GPT and Project. Surface risks. Map workflow coverage. Identify your best builders. Every sync ends with a board-ready executive briefing."
 >
 
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
@@ -61,7 +61,7 @@ const faqs = [
       </h1>
 
       <p class="text-lg md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 animate-fade-in animate-delay-2 leading-relaxed">
-        The system of record for enterprise AI adoption in ChatGPT. Inventory what exists. Surface what's risky. Detect where demand is concentrating. Know who your strongest builders are. Turn repeated effort into certified, shared standards.
+        The system of record for enterprise AI adoption in ChatGPT. Score every GPT. Surface risks. Map workflow coverage. Detect where demand is concentrating. Every sync ends with a board-ready executive briefing.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-3">
@@ -82,7 +82,7 @@ const faqs = [
         </a>
       </div>
 
-      <!-- Compliance API surface map: what's covered -->
+      <!-- Compliance API surface map -->
       <div class="max-w-3xl mx-auto animate-fade-in animate-delay-4">
         <div class="text-xs text-text-dim uppercase tracking-wider mb-4">What AgentsOrg covers, today and on the roadmap</div>
         <div class="flex flex-wrap justify-center gap-2">
@@ -119,16 +119,17 @@ const faqs = [
       <!-- Tab bar -->
       <div class="flex flex-wrap justify-center gap-2 mb-6" id="ss-tabs">
         {[
-          { id: 'overview',     label: 'Overview' },
-          { id: 'maturity',     label: 'Portfolio Maturity' },
-          { id: 'builders',     label: 'Builders' },
-          { id: 'departments',  label: 'Departments' },
-          { id: 'employee',     label: 'Employee Portal' },
-          { id: 'risk',         label: 'Risk Panel' },
-          { id: 'standardization', label: 'Standardization' },
-          { id: 'quality',      label: 'Quality Scores' },
+          { id: 'home',         label: 'Home' },
+          { id: 'portfolio',    label: 'Portfolio' },
+          { id: 'adoption',     label: 'Adoption' },
+          { id: 'workflows',    label: 'Workflows' },
+          { id: 'build-signals',label: 'Build Signals' },
           { id: 'recognition',  label: 'Recognition' },
-          { id: 'learning',     label: 'Learning' },
+          { id: 'learning',     label: 'Courses' },
+          { id: 'workshops',    label: 'Workshops' },
+          { id: 'sync',         label: 'Sync' },
+          { id: 'employee',     label: 'Employee Portal' },
+          { id: 'journey',      label: 'Asset Journey' },
         ].map((tab, i) => (
           <button
             data-tab={tab.id}
@@ -142,16 +143,17 @@ const faqs = [
       <!-- Screenshot panels -->
       <div class="relative rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/40">
         {[
-          { id: 'overview',    src: '/ss_overview.png',              alt: 'AI Portfolio Overview: 2012 GPTs, 202 risk flags, creation velocity, departments and processes', caption: '2,012 GPTs. Instant portfolio view.' },
-          { id: 'maturity',    src: '/ss_overview_maturity.png',   alt: 'Portfolio Maturity: GPTs classified as Production, Functional, or Experimental with quality scores',  caption: 'Know exactly which GPTs are production-grade and which need work.' },
-          { id: 'builders',    src: '/ss_overview_builders.png',   alt: 'Builders view: every GPT creator ranked by quality, adoption, hygiene, and volume',                  caption: 'Every builder in your org ranked by AI output quality.' },
-          { id: 'departments', src: '/ss_overview_departments.png',alt: 'Departments view: AI adoption and GPT count broken down by team',                                    caption: 'Understand AI adoption across every team.' },
-          { id: 'employee',    src: '/ss_employee.png',            alt: 'Employee Portal: browse GPTs by category, search by role or need',                                   caption: 'Every GPT, discoverable by anyone. Check what exists before you build.' },
-          { id: 'risk',        src: '/ss_risk.png',        alt: 'Risk Panel: GPTs flagged by severity, data exposure, compliance gaps',                              caption: '202 high-risk GPTs flagged automatically.' },
-          { id: 'standardization', src: '/ss_standardization.png', alt: 'Standardization Opportunities: semantic clustering identifies similar GPTs built independently across teams', caption: '6 standardization opportunities detected. One certified GPT replaces ten redundant builds.' },
-          { id: 'quality',     src: '/ss_quality.png',     alt: 'Quality Scores: per-GPT sophistication, prompting quality, ROI potential',                          caption: 'See the gap between your best and weakest builders.' },
-          { id: 'recognition', src: '/ss_recognition.png', alt: 'Builder Recognition: composite scores across quality, adoption, hygiene, volume',                   caption: 'Know who your best AI builders are. Recognize them.' },
-          { id: 'learning',    src: '/ss_learning.png',    alt: 'Learning: LLM-powered course recommendations per builder based on actual skill gaps',                caption: 'Targeted training based on each builder\'s actual gaps.' },
+          { id: 'home',          src: '/ss_home.png',          alt: 'Home: Quality vs Adoption quadrant with Champion, Hidden Gem, Scaled Risk, Retirement Candidate labels. Priority actions ranked by impact and effort. LLM executive summary.',                          caption: 'Champion vs Hidden Gem vs Scaled Risk. Know which GPTs to scale, promote, fix, or retire — from the first screen.' },
+          { id: 'portfolio',     src: '/ss_portfolio.png',     alt: 'Portfolio: all GPTs with composite quality, adoption, and risk scores. Tabbed view for health, ghost assets, and risk flags.',                                                                         caption: '512 GPTs. Composite scores. Ghost assets. Risk flags. One view.' },
+          { id: 'adoption',      src: '/ss_adoption.png',      alt: 'Adoption Intelligence: conversation counts, ghost asset alerts, drift signals, knowledge gap detection, top assets by usage, per-user insights.',                                                       caption: 'Conversation intelligence: who\'s actually using what, where usage is drifting, and where knowledge gaps are forming.' },
+          { id: 'workflows',     src: '/ss_workflows.png',     alt: 'Workflows: covered business processes with conversation evidence, ghost coverage (built but unused), intent gaps (user demand with no dedicated asset). LLM reasoning and priority actions per workflow.', caption: 'Covered workflows, ghost coverage, and intent gaps — with LLM reasoning. Know where to build AI next.' },
+          { id: 'build-signals', src: '/ss_build_signals.png', alt: 'Build Signals: semantic clustering detects when multiple teams independently built the same GPT. Groups by theme with estimated wasted hours and recommended action.',                                   caption: 'When 6 teams build the same meeting-summary GPT, that\'s not redundancy — it\'s a proven demand signal. One certified standard replaces all six.' },
+          { id: 'recognition',   src: '/ss_recognition.png',   alt: 'Builder Recognition: composite builder scores across quality, adoption, hygiene, and volume. Leaderboard with drill-down per builder.',                                                                caption: 'Know who your best AI builders are. Composite scores across quality, adoption, hygiene, and volume.' },
+          { id: 'learning',      src: '/ss_learning.png',      alt: 'Courses: LLM-powered course suggestions per builder based on actual skill gaps detected in their GPT output.',                                                                           caption: 'LLM-recommended training per builder, grounded in actual skill gaps — not a generic course catalog.' },
+          { id: 'workshops',     src: '/ss_workshops.png',     alt: 'Workshops: session management with participant lists, GPT tagging, and time-based quality impact measurement.',                                                                                        caption: 'Track workshops. Tag GPTs. Measure quality improvement before vs after.' },
+          { id: 'sync',          src: '/ss_sync.png',          alt: 'Sync: manual sync button, auto-sync toggle, full sync history with token consumption and cost per run.',                                                                                              caption: 'One sync. Three pipelines. Every run ends with a board-ready executive summary and ranked priority actions.' },
+          { id: 'employee',      src: '/ss_employee.png',      alt: 'Employee Portal: read-only GPT and Project discovery for the whole org. Search by role, category, or need.',                                                                                          caption: 'Every GPT, discoverable by anyone. Check what already exists before you build.' },
+          { id: 'journey',       src: '/ss_journey.png',       alt: 'Asset Journey: longitudinal quality, adoption, and risk score history for a single GPT. Line chart shows how scores evolved across every sync run.',                                                  caption: 'Every asset has a history. Watch quality improve — or catch a regression before it spreads.' },
         ].map((panel, i) => (
           <div data-panel={panel.id} class={`ss-panel ${i !== 0 ? 'hidden' : ''}`}>
             <img
@@ -211,7 +213,7 @@ const faqs = [
           {
             color: 'amber',
             title: 'No patterns',
-            desc: 'You don\'t know who your best AI builders are. Or who needs training. Or which GPTs are doing the same thing. The data exists. It\'s just unexplored.',
+            desc: 'You don\'t know who your best AI builders are. Or who needs training. Or which GPTs are doing the same thing. Or which workflows have no AI coverage at all. The data exists. It\'s just unexplored.',
           },
           {
             color: 'accent',
@@ -242,59 +244,132 @@ const faqs = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Leader Dashboard -->
-        <div class="md:col-span-2 p-5 sm:p-8 rounded-2xl border border-accent/20 bg-bg">
-          <div class="flex items-center gap-3 mb-6">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">For AI leaders and admins</span>
-          </div>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            {[
-              { name: 'Overview', color: 'accent', desc: 'Portfolio KPIs, creation velocity, drill-downs by builder, department, maturity, business process, output type.' },
-              { name: 'Risk Panel', color: 'red', desc: 'Every GPT flagged by severity. Data exposure, compliance gaps, ungoverned builds, surfaced automatically.' },
-              { name: 'Standardization Opportunities', color: 'violet', desc: 'Detects when multiple teams independently build GPTs for the same workflow — a strong signal that a shared, certified solution should exist.' },
-              { name: 'Quality Scores', color: 'amber', desc: 'Prompting quality distribution across the portfolio. See the gap between your best and weakest builders.' },
-            ].map(item => (
-              <div class={`p-5 rounded-xl border border-border bg-surface hover:border-${item.color}/30 transition-colors`}>
-                <div class={`text-${item.color} text-xs font-semibold mb-2`}>{item.name}</div>
-                <p class="text-text-muted text-xs leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div class="grid sm:grid-cols-3 gap-4">
-            {[
-              { name: 'Recognition', color: 'green', desc: 'Composite builder scores across quality, adoption, hygiene, and volume. Know who to promote and who to support.' },
-              { name: 'Learning', color: 'green', desc: 'AI-recommended training per builder based on actual skill gaps, not a generic course catalog.' },
-              { name: 'Workshops', color: 'green', desc: 'Track in-person sessions. Participant lists. GPT tagging. Measure quality improvement before vs after.' },
-            ].map(item => (
-              <div class={`p-5 rounded-xl border border-border bg-surface hover:border-${item.color}/30 transition-colors`}>
-                <div class={`text-${item.color} text-xs font-semibold mb-2`}>{item.name}</div>
-                <p class="text-text-muted text-xs leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div class="space-y-6">
 
-        <!-- Employee Portal -->
-        <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green/10 text-green border border-green/20">Employee Portal</span>
-            <span class="text-text-dim text-sm">For the whole org</span>
+        <!-- Home: Quadrant + Priority Actions — hero feature -->
+        <div class="p-5 sm:p-8 rounded-2xl border border-accent/30 bg-bg">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">Home</span>
+            <span class="text-text-dim text-sm">The first screen. The most important one.</span>
           </div>
-          <p class="text-text-muted text-sm leading-relaxed">
-            Read-only GPT and Project discovery for every employee. Check if a certified solution already exists for your workflow before you build.
+          <h3 class="text-xl font-bold mb-3">Quality × Adoption Quadrant + AI Priority Actions</h3>
+          <p class="text-text-muted text-sm leading-relaxed mb-5 max-w-3xl">
+            Every scored GPT lands in one of four quadrants: <strong class="text-text">Champion</strong> (high quality, high adoption — scale these), <strong class="text-text">Hidden Gem</strong> (high quality, low adoption — promote these), <strong class="text-text">Scaled Risk</strong> (low quality, high adoption — fix these now), <strong class="text-text">Retirement Candidate</strong> (low quality, low adoption — decommission). After every pipeline run, an LLM generates 5–10 ranked priority actions and a board-ready executive summary paragraph — each action tied to specific GPTs with impact, effort, and reasoning.
           </p>
-        </div>
-
-        <!-- KPIs -->
-        <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
-          <div class="text-xs text-text-dim uppercase tracking-wider mb-4">Each GPT is scored across 9 dimensions</div>
-          <div class="flex flex-wrap gap-2">
-            {['Risk Level', 'Prompting Quality', 'ROI Potential', 'Sophistication', 'Business Process', 'Intended Audience', 'Integrations', 'Output Type', 'Adoption Friction'].map(kpi => (
-              <span class="px-2.5 py-1 rounded-full text-xs border border-border bg-surface text-text-muted">{kpi}</span>
+          <div class="grid sm:grid-cols-4 gap-3">
+            {[
+              { label: 'Champion', color: 'green',  desc: 'High quality · High adoption. Scale and certify.' },
+              { label: 'Hidden Gem', color: 'accent', desc: 'High quality · Low adoption. Promote and surface.' },
+              { label: 'Scaled Risk', color: 'amber', desc: 'Low quality · High adoption. Fix before it spreads.' },
+              { label: 'Retirement Candidate', color: 'red', desc: 'Low quality · Low adoption. Decommission.' },
+            ].map(q => (
+              <div class={`p-4 rounded-xl border border-${q.color}/20 bg-${q.color}/5`}>
+                <div class={`text-${q.color} text-xs font-bold mb-1`}>{q.label}</div>
+                <p class="text-text-dim text-xs leading-relaxed">{q.desc}</p>
+              </div>
             ))}
           </div>
         </div>
+
+        <!-- Portfolio + Adoption -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">Portfolio</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Scored. Ranked. Historically tracked.</h3>
+            <p class="text-text-muted text-sm leading-relaxed">
+              Every asset gets composite <strong class="text-text">quality</strong>, <strong class="text-text">adoption</strong>, and <strong class="text-text">risk</strong> scores (0–100). Tabbed views: all assets, ghost assets (zero usage), risk flags. The drawer "Journey" tab shows how each GPT's scores have changed across every sync. Portfolio health trend tracks whether your AI investment is improving over time.
+            </p>
+          </div>
+          <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">Adoption</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Conversation intelligence.</h3>
+            <p class="text-text-muted text-sm leading-relaxed">
+              Syncs the conversation JSONL export from OpenAI to answer: which GPTs are actually being used, by whom, and for what topics. Conversations are attributed back to the originating GPT or Project via the conversation pipeline — giving each asset its own usage fingerprint. Surfaces <strong class="text-text">ghost assets</strong> (built but unused), <strong class="text-text">drift alerts</strong> (usage patterns shifting), <strong class="text-text">knowledge gaps</strong> (conversation topics with no asset match), and per-user adoption scores with role fit analysis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Workflows — new feature, full width -->
+        <div class="p-5 sm:p-8 rounded-2xl border border-violet/30 bg-bg">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-violet/10 text-violet border border-violet/20">Workflows</span>
+            <span class="text-text-dim text-sm">Where should we build AI next?</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Business process coverage analysis.</h3>
+          <p class="text-text-muted text-sm leading-relaxed mb-5 max-w-3xl">
+            Maps every conversation and GPT to the business processes they touch. After each sync, the platform categorizes every workflow into one of three states — and generates LLM reasoning and a recommended action for each.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-3">
+            {[
+              { label: 'Covered',       color: 'green',  desc: 'Assets built + active conversations. Healthy. Monitor for drift.' },
+              { label: 'Ghost Coverage', color: 'amber', desc: 'Assets built, but zero conversation activity. Nobody\'s using it.' },
+              { label: 'Intent Gap',    color: 'violet', desc: 'Conversation demand exists, but no dedicated asset. Build this next.' },
+            ].map(w => (
+              <div class={`p-4 rounded-xl border border-${w.color}/20 bg-${w.color}/5`}>
+                <div class={`text-${w.color} text-xs font-bold mb-1`}>{w.label}</div>
+                <p class="text-text-dim text-xs leading-relaxed">{w.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Build Signals + L&D row -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">Build Signals</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Proven demand. Not just redundancy.</h3>
+            <p class="text-text-muted text-sm leading-relaxed">
+              Semantic clustering (pgvector + centroid algorithm + LLM validation) detects when multiple teams independently built GPTs for the same workflow. That convergence is a strong demand signal. Surfaces the best-candidate asset to certify as an org standard, with estimated hours saved by consolidation.
+            </p>
+          </div>
+          <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green/10 text-green border border-green/20">Learning & Dev</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Recognition. Courses. Workshops.</h3>
+            <p class="text-text-muted text-sm leading-relaxed">
+              <strong class="text-text">Recognition</strong> — composite builder scores across quality, adoption, hygiene, and volume. Know who to promote and who to support. <strong class="text-text">Learning</strong> — LLM-recommended courses per builder, grounded in actual skill gaps in their GPT output, not a generic catalog. <strong class="text-text">Workshops</strong> — track sessions, participants, GPT tagging, and measure quality improvement before vs after.
+            </p>
+          </div>
+        </div>
+
+        <!-- Employee Portal + 9 signals -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green/10 text-green border border-green/20">Employee Portal</span>
+              <span class="text-text-dim text-sm">For the whole org</span>
+            </div>
+            <p class="text-text-muted text-sm leading-relaxed">
+              Read-only GPT and Project discovery for every employee. Search by role, category, or business need. Check if a certified solution already exists for your workflow before you build something new.
+            </p>
+          </div>
+
+          <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
+            <div class="text-xs text-text-dim uppercase tracking-wider mb-4">9 enrichment signals + 3 composite scores per GPT</div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {['Risk Level', 'Prompting Quality', 'ROI Potential', 'Sophistication', 'Business Process', 'Intended Audience', 'Integrations', 'Output Type', 'Adoption Friction'].map(kpi => (
+                <span class="px-2.5 py-1 rounded-full text-xs border border-border bg-surface text-text-muted">{kpi}</span>
+              ))}
+            </div>
+            <div class="flex flex-wrap gap-2">
+              {[
+                { label: 'Quality Score 0–100', color: 'green' },
+                { label: 'Adoption Score 0–100', color: 'accent' },
+                { label: 'Risk Score 0–100', color: 'red' },
+              ].map(s => (
+                <span class={`px-2.5 py-1 rounded-full text-xs border border-${s.color}/30 bg-${s.color}/10 text-${s.color} font-semibold`}>{s.label}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -362,17 +437,17 @@ const faqs = [
           {
             num: '02',
             title: 'Try demo mode first',
-            desc: 'No API key needed. Switch on Demo mode to explore the full platform: risk panel, standardization opportunities, quality scores, builder recognition, with realistic sample data. Connect your real workspace when you\'re ready.',
+            desc: 'No API key needed. Switch on Demo mode to explore the full platform: quality and adoption scoring, conversation intelligence, workflow coverage analysis, build signals, builder recognition — with 500+ realistic GPTs. Connect your real workspace when you\'re ready.',
           },
           {
             num: '03',
-            title: 'Run the pipeline',
-            desc: 'Fetch → Classify → Enrich → Embed → Store. Every GPT scored across 9 dimensions. Demand clusters detected. Risk flagged. Progress shown live.',
+            title: 'Run the pipelines',
+            desc: 'Three pipelines run automatically. Asset pipeline: Fetch → Filter → Classify → Enrich → Score → Recommendations → Store. Conversation pipeline: Fetch JSONL → Aggregate → Topic Analysis → User Analysis → Workflow Intelligence. Clustering pipeline: Semantic similarity → LLM validation → Demand signal detection. Every run ends with a board-ready executive summary and 5–10 ranked priority actions.',
           },
           {
             num: '04',
             title: 'Act on intelligence',
-            desc: 'The Leader Dashboard gives you the full picture. The Employee Portal gives the org a place to discover what already exists.',
+            desc: 'The Home page opens with your AI executive summary and ranked priority actions. The quadrant shows exactly which GPTs to scale, promote, fix, or retire. Workflows shows where AI coverage is missing. Build Signals shows which tools to certify as org standards. The Employee Portal gives the whole org a place to discover what already exists.',
           },
         ].map(s => (
           <div class="flex gap-4 sm:gap-6 p-5 sm:p-7 rounded-2xl border border-border bg-surface hover:border-accent/30 transition-all group">
@@ -401,24 +476,31 @@ const faqs = [
       </div>
 
       <div class="grid md:grid-cols-3 gap-5">
-        <!-- Phase 1 -->
+        <!-- Phase 1: Live Today -->
         <div class="p-5 sm:p-7 rounded-2xl border border-accent/40 bg-bg">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
             <span class="text-xs font-semibold text-green uppercase tracking-wider">Live Today</span>
           </div>
-          <h3 class="text-lg font-bold mb-1">What are we building?<br/>Is it safe?</h3>
-          <p class="text-text-dim text-xs mb-5">Custom GPTs · Projects · Configs · Files</p>
+          <h3 class="text-lg font-bold mb-1">What are we building?<br/>Is it safe? Who's using it?</h3>
+          <p class="text-text-dim text-xs mb-5">Custom GPTs · Projects · Conversations · Users</p>
           <ul class="space-y-2">
             {[
               'Full GPT & Project portfolio discovery',
               'Risk flagging & compliance scoring',
-              'Standardization opportunity detection',
-              'Quality scores across 9 dimensions',
+              'Quality, adoption & risk composite scores (0–100)',
+              'Quality × Adoption quadrant (Champion / Hidden Gem / Scaled Risk / Retirement)',
+              'LLM-generated priority actions + executive summary',
+              'Standardization opportunity detection (Build Signals)',
               'Builder recognition & scoring',
               'AI-powered L&D recommendations',
               'Workshop tracking & impact measurement',
-              'Demo mode, no API key needed',
+              'Conversation intelligence (ghost assets, drift, knowledge gaps)',
+              'Per-user adoption scoring & role fit analysis',
+              'Workflow coverage analysis (covered / ghost / intent gaps)',
+              'Portfolio health trend over time',
+              'Per-asset score history',
+              'Demo mode — no API key needed',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-muted">
                 <svg class="w-4 h-4 text-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -428,23 +510,21 @@ const faqs = [
           </ul>
         </div>
 
-        <!-- Phase 2 -->
+        <!-- Phase 2: Coming -->
         <div class="p-5 sm:p-7 rounded-2xl border border-border bg-bg">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-2 h-2 rounded-full bg-violet"></span>
             <span class="text-xs font-semibold text-violet uppercase tracking-wider">Coming</span>
           </div>
-          <h3 class="text-lg font-bold mb-1">Who's actually using AI?<br/>How much?</h3>
-          <p class="text-text-dim text-xs mb-5">Conversations · Users · Logs</p>
+          <h3 class="text-lg font-bold mb-1">Deeper measurement.<br/>Automated reporting.</h3>
+          <p class="text-text-dim text-xs mb-5">Cost · Compliance · Reports</p>
           <ul class="space-y-2">
             {[
-              'Conversation analytics (volume, patterns)',
-              'User-level AI adoption scoring',
-              'Department & role benchmarking',
-              'Cost attribution per GPT',
+              'Cost attribution per GPT (UI — data already collected)',
+              'Department & role benchmarking heatmaps',
+              'Automated portfolio health reports (PDF / Slack / email)',
               'Compliance log analysis',
-              'Automated portfolio health reports',
-              'GPT lifecycle tracking',
+              'GPT lifecycle tracking (created → active → retired)',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-muted">
                 <svg class="w-4 h-4 text-text-dim mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>
@@ -454,7 +534,7 @@ const faqs = [
           </ul>
         </div>
 
-        <!-- Phase 3 -->
+        <!-- Phase 3: Vision -->
         <div class="p-5 sm:p-7 rounded-2xl border border-border bg-bg">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-2 h-2 rounded-full bg-text-dim"></span>
@@ -567,20 +647,22 @@ const faqs = [
   <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
   <section class="py-14 md:py-24 px-4 sm:px-6 bg-surface">
     <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">See your GPT & Project portfolio in 5 minutes.</h2>
-      <p class="text-text-muted text-base sm:text-lg mb-8">No API key. No signup. Demo mode included.</p>
-      <a
-        href="https://github.com/ori129/agentsorg#quick-start"
-        target="_blank"
-        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all hover:shadow-xl hover:shadow-accent/25 text-sm mb-6"
-      >
-        Try demo. No API key, no signup.
-      </a>
-      <div class="p-5 rounded-2xl border border-border bg-bg font-mono text-left text-sm overflow-x-auto">
-        <div class="text-text-dim text-xs mb-2 uppercase tracking-wider">Or self-host in minutes</div>
-        <div><span class="text-text-dim select-none">$ </span><span class="text-text">git clone https://github.com/ori129/agentsorg.git</span></div>
-        <div><span class="text-text-dim select-none">$ </span><span class="text-text">cd agentsorg && make up</span></div>
-        <div class="text-green mt-2">✓ Ready at http://localhost:3000</div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">See your GPT &amp; Project portfolio in 5 minutes.</h2>
+      <p class="text-text-muted text-lg mb-8">No API key. No signup. Demo mode included.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        <a
+          href="https://github.com/ori129/agentsorg#quick-start"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent/90 transition-all hover:shadow-xl hover:shadow-accent/25 text-sm"
+        >
+          Try demo. No API key, no signup.
+        </a>
+      </div>
+      <div class="font-mono text-xs bg-bg border border-border rounded-xl p-5 text-left text-text-muted max-w-md mx-auto">
+        <div class="text-text-dim mb-1">Or self-host in minutes</div>
+        <div>$ git clone https://github.com/ori129/agentsorg.git</div>
+        <div>$ cd agentsorg &amp;&amp; make up</div>
+        <div class="text-green mt-1">✓ Ready at http://localhost:3000</div>
       </div>
     </div>
   </section>
