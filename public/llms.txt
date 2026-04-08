@@ -1,8 +1,8 @@
 # AgentsOrg
 
-> AI Transformation Intelligence — open-source governance platform for enterprise ChatGPT
+> AI Transformation Intelligence: open-source governance platform for enterprise ChatGPT
 
-AgentsOrg is an open-source platform that connects to OpenAI's Compliance API to discover, classify, and semantically enrich every Custom GPT in an enterprise workspace. It surfaces actionable intelligence through a Leader Dashboard, Employee Portal, and Learning & Development module.
+AgentsOrg is an open-source platform that connects to OpenAI's Compliance API to discover, classify, and semantically enrich every Custom GPT and Project in an enterprise workspace. It surfaces actionable intelligence through a Leader Dashboard, Employee Portal, and Learning & Development module. Every pipeline run ends with a board-ready executive summary and ranked priority actions.
 
 Built for AI Transformation Leaders at organizations running ChatGPT Enterprise or Team.
 
@@ -12,29 +12,37 @@ Built for AI Transformation Leaders at organizations running ChatGPT Enterprise 
 
 ## Key pages
 
-- [Home](https://agentsorg.ai/): Landing page — platform overview, features, roadmap, FAQ
+- [Home](https://agentsorg.ai/): Landing page: platform overview, features, roadmap, FAQ
 - [Advisors Directory](https://agentsorg.ai/advisors): 52+ AI Transformation Advisors who help enterprises govern ChatGPT. Apply to join.
 - [Blog](https://agentsorg.ai/blog): Articles on AI Transformation Intelligence, GPT governance, and enterprise AI maturity
 
 ## Blog posts
 
 - [The AI Center of Excellence Playbook for ChatGPT Enterprise](https://agentsorg.ai/blog/ai-center-of-excellence-playbook): How to build an AI CoE with a three-layer org structure, four-tier governance model, and 60-day launch plan
-- [How to Measure ROI on ChatGPT Enterprise (Without Guessing)](https://agentsorg.ai/blog/chatgpt-enterprise-roi-measurement): Data-driven ROI framework using five portfolio-level metrics — maturity distribution, duplication rate, builder concentration, adoption friction, process coverage
-- [Shadow AI: How to Discover What's Actually Running in Your ChatGPT Workspace](https://agentsorg.ai/blog/shadow-ai-discovery-enterprise): Practical framework for discovering, risk-scoring, and governing ungoverned Custom GPTs before they become a liability
+- [How to Measure ROI on ChatGPT Enterprise (Without Guessing)](https://agentsorg.ai/blog/chatgpt-enterprise-roi-measurement): Data-driven ROI framework using five portfolio-level metrics: maturity distribution, duplication rate, builder concentration, adoption friction, process coverage
+- [Shadow AI: How to Discover What's Actually Running in Your ChatGPT Workspace](https://agentsorg.ai/blog/shadow-ai-discovery-enterprise): Practical framework for discovering, risk-scoring, and governing ungoverned Custom GPTs and Projects before they become a liability
 - [What Is AI Transformation Intelligence?](https://agentsorg.ai/blog/ai-transformation-intelligence): Defines the discipline of using semantic analysis and automation to govern enterprise AI portfolios
 - [The GPT Portfolio Maturity Model](https://agentsorg.ai/blog/gpt-portfolio-maturity-model): Framework for classifying Custom GPTs as Experimental (60%), Functional (25%), or Production (15%)
-- [The Enterprise Custom GPT Governance Guide](https://agentsorg.ai/blog/enterprise-custom-gpt-governance-guide): Five-pillar framework for governing Custom GPTs at scale — discovery, assessment, risk, optimization, lifecycle
+- [The Enterprise Custom GPT Governance Guide](https://agentsorg.ai/blog/enterprise-custom-gpt-governance-guide): Five-pillar framework for governing Custom GPTs and Projects at scale: discovery, assessment, risk, optimization, lifecycle
 
 ## Core concepts
 
 - **AI Transformation Intelligence (ATI)**: The discipline of using data and LLM-powered semantic analysis to understand, govern, and optimize an organization's AI portfolio
 - **GPT Portfolio Maturity Model**: Classifies every Custom GPT as Production (sophistication 4-5), Functional (3), or Experimental (1-2)
+- **Quality x Adoption Quadrant**: Plots every GPT as Champion (scale), Hidden Gem (promote), Scaled Risk (fix), or Retirement Candidate (decommission)
 - **9 Semantic KPIs**: Risk level, sophistication, prompting quality, ROI potential, business process, intended audience, integration flags, output type, adoption friction
-- **Semantic Duplicate Detection**: pgvector-powered clustering that finds redundant Custom GPTs even when named differently
+- **Semantic Duplicate Detection**: pgvector-powered clustering that finds redundant Custom GPTs and Projects even when named differently
+- **Workflow Coverage Analysis**: Maps conversations and assets to business processes; detects Covered workflows, Ghost Coverage (built but unused), and Intent Gaps (demand with no asset)
+- **Build Signals**: When multiple teams independently build the same GPT, that convergence is a demand signal to certify one org standard
+
+## Platform support
+
+- **Live today**: ChatGPT Enterprise and ChatGPT Team (via OpenAI Compliance API)
+- **Roadmap**: Claude for Business (Anthropic) and Google Gemini for Workspace
 
 ## Open source
 
 - GitHub: https://github.com/ori129/agentsorg
 - License: Apache 2.0
 - Self-hosted via Docker Compose
-- Demo mode included — no API keys required
+- Demo mode included: no API keys required
