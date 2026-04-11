@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     q: 'Does my data leave my infrastructure?',
-    a: 'Never. Fully self-hosted on your own PostgreSQL instance. API keys are Fernet-encrypted at rest.',
+    a: 'Never. Fully self-hosted on your own PostgreSQL instance. API keys and OIDC secrets are Fernet-encrypted at rest. TOTP MFA secrets are encrypted before storage. Session cookies are HttpOnly + SameSite. Bearer tokens are restricted to API token type only — browser sessions cannot be replayed as API tokens.',
   },
   {
     q: 'Is this production-ready?',
-    a: 'Yes. The full platform is live today: Custom GPT & Project portfolio discovery, risk flagging, standardization opportunity detection, quality and adoption scoring, builder recognition, L&D recommendations, conversation intelligence (ghost asset detection, per-user adoption insights, knowledge gap signals), workflow coverage analysis, and LLM-generated priority actions with a board-ready executive summary. Demo mode lets you explore everything without an API key.',
+    a: 'Yes. The full platform is live today: Custom GPT & Project portfolio discovery, risk flagging, standardization opportunity detection, quality and adoption scoring, builder recognition, L&D recommendations, conversation intelligence (ghost asset detection, per-user adoption insights, knowledge gap signals), workflow coverage analysis, and LLM-generated priority actions with a board-ready executive summary. Auth and security hardening is also complete: SSO via OIDC with hard enforcement, TOTP MFA, role-gated analytics, Fernet-encrypted secrets, and bearer token restrictions. Demo mode lets you explore everything without an API key.',
   },
   {
     q: 'How is this different from the OpenAI admin console?',
@@ -353,6 +353,28 @@ const faqs = [
           </div>
         </div>
 
+        <!-- Security row -->
+        <div class="p-5 sm:p-8 rounded-2xl border border-red/20 bg-bg">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-red/10 text-red border border-red/20">Security</span>
+            <span class="text-text-dim text-sm">Enterprise-grade auth out of the box.</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">SSO · TOTP MFA · Role-gated access · Encrypted secrets</h3>
+          <div class="grid sm:grid-cols-4 gap-3">
+            {[
+              { label: 'SSO via OIDC', color: 'accent', desc: 'Okta, Entra ID, Google. Enforce SSO org-wide — non-admins can\'t bypass it.' },
+              { label: 'TOTP MFA', color: 'green', desc: 'Two-step login with any TOTP app. Secrets Fernet-encrypted at rest.' },
+              { label: 'Role-gated analytics', color: 'violet', desc: 'Employees see the portal. Only AI leaders see org intelligence and pipeline data.' },
+              { label: 'Encrypted secrets', color: 'red', desc: 'API keys, OIDC client secrets, MFA secrets — all Fernet-encrypted. Key rotation endpoint included.' },
+            ].map(q => (
+              <div class={`p-4 rounded-xl border border-${q.color}/20 bg-${q.color}/5`}>
+                <div class={`text-${q.color} text-xs font-bold mb-1`}>{q.label}</div>
+                <p class="text-text-dim text-xs leading-relaxed">{q.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <!-- Employee Portal + 9 signals -->
         <div class="grid md:grid-cols-2 gap-6">
           <div class="p-5 sm:p-8 rounded-2xl border border-border bg-bg">
@@ -514,6 +536,9 @@ const faqs = [
               'Workflow coverage analysis (covered / ghost / intent gaps)',
               'Portfolio health trend over time',
               'Per-asset score history',
+              'SSO via OIDC (Okta, Entra ID, Google) with hard enforcement mode',
+              'TOTP MFA (two-step login with authenticator app)',
+              'Role-gated analytics (employees blocked from org intelligence)',
               'Demo mode (no API key needed)',
             ].map(item => (
               <li class="flex items-start gap-2 text-sm text-text-muted">
